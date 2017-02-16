@@ -2,7 +2,7 @@
   "name": "Ultrasonography of [body structure]",
   "focusConcept": "71388002",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 278292003 |Ultrasound imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<123037004 |Body structure (body structure)|) @bodyStructure]]\n\t}\n",
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 278292003 |Ultrasound imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<123037004 |Body structure (body structure)|) @procSite]]\n\t}\n",
   "conceptOutline": {
     "relationships": [
       {
