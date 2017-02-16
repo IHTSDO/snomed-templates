@@ -1,7 +1,7 @@
 {
   "name": "CT of [body structure] with contrast",
   "focusConcept": "71388002",
-  "version": 4,
+  "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<123037004 |Body structure (body structure)|) @bodyStructure]],\n\t\t424361007 |Using substance (attribute)| = 385420005 |Contrast media (substance)|\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
@@ -76,8 +76,8 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Computed tomography of $procSite$ with contrast (procedure)",
-        "initialTerm": "Computed tomography of [body structure] with contrast (procedure)",
+        "termTemplate": "Computed tomography of $procSite$ with contrast",
+        "initialTerm": "Computed tomography of [body structure] with contrast",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
