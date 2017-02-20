@@ -1,51 +1,14 @@
 {
   "name": "CT angiography of [body structure]",
-  "focusConcept": "71388002",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<59820001 |Blood vessel structure (body structure)|) @procSite]]}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
-    "relationships": [
-      {
-        "characteristicType": "STATED_RELATIONSHIP",
-        "groupId": 0,
-        "type": {
-          "conceptId": "116680003"
-        },
-        "target": {
-          "conceptId": "71388002"
-        }
-      },
-      {
-        "characteristicType": "STATED_RELATIONSHIP",
-        "groupId": 1,
-        "type": {
-          "conceptId": "260686004"
-        },
-        "target": {
-          "conceptId": "312251004"
-        }
-      },
-      {
-        "characteristicType": "STATED_RELATIONSHIP",
-        "groupId": 1,
-        "type": {
-          "conceptId": "405813007"
-        },
-        "targetSlot": {
-          "slotName": "procSite",
-          "allowableRangeECL": "<<59820001 |Blood vessel structure (body structure)|"
-        },
-        "cardinalityMin": "1",
-        "cardinalityMax": "1"
-      }
-    ],
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
         "termTemplate": "Computed tomography angiography of $procSite$ (procedure)",
-        "initialTerm": "Computed tomography angiography of [body structure] (procedure)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -56,7 +19,6 @@
         "type": "SYNONYM",
         "lang": "en",
         "termTemplate": "CT angiography of $procSite$",
-        "initialTerm": "CT angiography of [body structure]",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -67,7 +29,6 @@
         "type": "SYNONYM",
         "lang": "en",
         "termTemplate": "Computed tomography angiography of $procSite$",
-        "initialTerm": "Computed tomography angiography of [body structure]",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
@@ -78,7 +39,6 @@
         "type": "SYNONYM",
         "lang": "en",
         "termTemplate": "CT angiogram of $procSite$",
-        "initialTerm": "CT angiogram of [body structure]",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
