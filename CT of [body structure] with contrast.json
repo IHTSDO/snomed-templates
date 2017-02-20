@@ -48,7 +48,7 @@
         "targetSlot": {
           "slotName": "substance",
           "allowableRangeECL": "<<385420005 |Contrast media (substance)|"
-        },
+        }
       }
     ],
     "descriptions": [
