@@ -1,0 +1,52 @@
+{
+  "name": "LOINC Template - Quality Observable - 101 - 5",
+  "version": 1,
+  "logicalTemplate": "363787002 |Observable entity (observable entity)|:\n\t{\n\t\t246093002 |Component (attribute)| = [[+id(<<123037004 |Body structure| OR <<410607006 |Organism| OR <<105590001 |Substance| OR <<123038009 |Specimen| OR <<260787004 |Physical object| OR <<373873005 |Pharmaceutical / biologic product| OR <<419891008 |Record artifact|) @component]],\n\t\t704325000 |Relative to (attribute)| = [[+id(<<123037004 |Body structure| OR <<410607006 |Organism| OR <<105590001 |Substance| OR <<123038009 |Specimen| OR <<260787004 |Physical object| OR <<373873005 |Pharmaceutical / biologic product| OR <<419891008 |Record artifact|) @relativeTo]],\n\t\t704318007 |Property type (attribute)| = [[+id(<<118598001 |Measurement property|) @propertyType]],\n\t\t370134009 |Time aspect (attribute)| = [[+id(<7389001 |Time frame|) @timeAspect]],\n\t\t704327008 |Direct site (attribute)| = [[+id(<<123037004 |Body structure| OR <<410607006 |Organism| OR <<105590001 |Substance| OR <<123038009 |Specimen| OR <<260787004 |Physical object| OR <<373873005 |Pharmaceutical / biologic product| OR <<419891008 |Record artifact|) @directSite]],\n\t\t704319004 |Inheres in (attribute)| = [[+id(<<123037004 |Body structure| OR <<410607006 |Organism| OR <<105590001 |Substance| OR <<123038009 |Specimen| OR <<260787004 |Physical object| OR <<373873005 |Pharmaceutical / biologic product| OR <<419891008 |Record artifact|) @inheresIn]],\n\t\t370132008 |Scale type (attribute)| = [[+id(<<30766002 |Quantitative| OR <<26716007 |Qualitative| OR <<117363000 |Ordinal value| OR <<117365007 |Ordinal or quantitative value| OR <<117362005 |Nominal value| OR <<117364006 |Narrative value| OR <<117444000 |Text value|) @scaleType]],\n\t\t246501002 |Technique (attribute)| = [[+id(<272394005 |Technique|) @technique]]\n\t}\n",
+  "additionalSlots": ["LOINC_FSN", "LOINC_Unique_ID", "Correlation_ID"],
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$LOINC_FSN$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$LOINC_FSN$",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "LOINC Unique ID:$LOINC_Unique_ID$",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Correlation ID:$Correlation_ID$",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": []
+}
