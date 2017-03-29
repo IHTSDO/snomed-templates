@@ -1,7 +1,7 @@
 {
   "name": "Congenital [morphology] of [body structure]",
   "version": 1,
-  "logicalTemplate": "264572001 |Disease (disorder)|:\n\t{\n\t\t246454002 |Occurrence (attribute)| = 255399007 |Congenital (qualifier value)|,\n\t\t116676008 |Associated morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t{\n\t\t246454002 |Occurrence (attribute)| = 255399007 |Congenital (qualifier value)|,\n\t\t116676008 |Associated morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
