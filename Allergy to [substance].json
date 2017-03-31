@@ -1,7 +1,7 @@
 {
   "name": "Allergy to [substance]",
   "version": 1,
-  "logicalTemplate": "420134006 |Propensity to adverse reactions (disorder)|:\n\t{\n\t\t370135005 |Pathological process (attribute)| = 472964009 |Allergic process (qualifier value)|\n\t},\n\t{\n\t\t246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]],\n\t\t255234002 |After (attribute)| = 609327009 |Allergic sensitization (disorder)|\n\t}\n",
+  "logicalTemplate": "420134006 |Propensity to adverse reactions (disorder)|:\n\t\n\t370135005 |Pathological process (attribute)| = 472964009 |Allergic process (qualifier value)|,\n\t{\n\t\t246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]],\n\t\t255234002 |After (attribute)| = 609327009 |Allergic sensitization (disorder)|\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
