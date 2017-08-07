@@ -11,7 +11,7 @@
         "type": "FSN",
         "lang": "en",
         "termTemplate": "$LOINC_FSN$ (observable entity)",
-        "caseSignificance": "CASE_INSENSITIVE",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
           "900000000000509007": "PREFERRED"
