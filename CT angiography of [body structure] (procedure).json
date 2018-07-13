@@ -1,13 +1,14 @@
 {
-  "name": "Ultrasonography of [body structure]",
+  "name": "CT angiography of [body structure] (procedure)",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 278292003 |Ultrasound imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @procSite]]\n\t}\n",
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<59820001 |Blood vessel structure (body structure)|) @procSite]]}\n",
   "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Ultrasonography of $procSite$ (procedure)",
+        "termTemplate": "Computed tomography angiography of $procSite$ (procedure)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -17,8 +18,8 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Ultrasonography of $procSite$",
-        "caseSignificance": "CASE_INSENSITIVE",
+        "termTemplate": "CT angiography of $procSite$",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
           "900000000000509007": "PREFERRED"
@@ -27,7 +28,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Ultrasound scan of $procSite$",
+        "termTemplate": "Computed tomography angiography of $procSite$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
@@ -37,8 +38,8 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Ultrasound of $procSite$",
-        "caseSignificance": "CASE_INSENSITIVE",
+        "termTemplate": "CT angiogram of $procSite$",
+        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
           "900000000000509007": "ACCEPTABLE"

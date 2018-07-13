@@ -1,15 +1,14 @@
 {
-  "name": "MRI of [body structure]",
+  "name": "CT of [body structure] (procedure)",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312250003 |Magnetic resonance imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id( <<442083009 |Anatomical or acquired body structure (body structure)|) @procSite]]}\n",
+  "logicalTemplate": "71388002 |Procedure|:\n\t[[~1..1]] {\n\t\t260686004 |Method| = 312251004 |Computed tomography imaging action|,\n\t\t[[~1..1]] 405813007 |Procedure site - Direct| = [[+id(<< 442083009 |Anatomical or acquired body structure|) @procSite]]\n\t}\n",
   "conceptOutline": {
-    "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Magnetic resonance imaging of $procSite$ (procedure)",
-        "caseSignificance": "CASE_INSENSITIVE",
+        "termTemplate": "Computed tomography of $procSite$ (procedure)",
+        "caseSignificance": "INITIAL_CHARACTER_CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
           "900000000000509007": "PREFERRED"
@@ -18,7 +17,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "MRI of $procSite$",
+        "termTemplate": "CT of $procSite$",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -28,7 +27,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Magnetic resonance imaging of $procSite$",
+        "termTemplate": "Computed tomography of $procSite$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
@@ -40,11 +39,12 @@
   "lexicalTemplates": [
     {
       "name": "procSite",
-      "displayName": "body structure",
+      "displayName": "X",
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",
-        "structure"
+        "structure",
+        "part of"
       ]
     }
   ]

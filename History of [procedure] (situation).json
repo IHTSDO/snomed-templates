@@ -1,14 +1,14 @@
 {
-  "name": "Family history of [procedure]",
+  "name": "History of [procedure] (situation)",
   "version": 1,
-  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t363589002 |Associated procedure (attribute)| = [[+id(<71388002 |Procedure (procedure)|) @procedure]],\n\t\t408731000 |Temporal context (attribute)| = 410511007 |Current or past (actual) (qualifier value)|,\n\t\t408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 444148008 |Person in family of subject (person)|\n\t}\n",
+  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t363589002 |Associated procedure (attribute)| = [[+id(<71388002 |Procedure (procedure)|) @procedure]],\n\t\t408731000 |Temporal context (attribute)| = [[+id(<<410513005 |In the past (qualifier value)|) @past]],\n\t\t408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 410604004 |Subject of record (person)|\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Family history of $procedure$ (situation)",
+        "termTemplate": "History of $procedure$ (situation)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -18,7 +18,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Family history of $procedure$",
+        "termTemplate": "History of $procedure$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",

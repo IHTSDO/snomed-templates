@@ -1,14 +1,14 @@
 {
-  "name": "CT angiography of [body structure]",
+  "name": "CT arteriography of [body structure] (procedure)",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<59820001 |Blood vessel structure (body structure)|) @procSite]]}\n",
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<11527006 |Arterial system structure (body structure)|) @procSite]]}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Computed tomography angiography of $procSite$ (procedure)",
+        "termTemplate": "Computed tomography arteriography of $procSite$ (procedure)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -18,7 +18,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "CT angiography of $procSite$",
+        "termTemplate": "CT arteriography of $procSite$",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -28,7 +28,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Computed tomography angiography of $procSite$",
+        "termTemplate": "Computed tomography arteriography of $procSite$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
@@ -38,7 +38,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "CT angiogram of $procSite$",
+        "termTemplate": "CT arteriogram of $procSite$",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",

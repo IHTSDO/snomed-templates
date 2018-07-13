@@ -1,14 +1,14 @@
 {
-  "name": "CT venography of [body structure]",
+  "name": "MRI of [body structure] (procedure)",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id( <<119553000 |Venous system structure (body structure)|) @procSite]]}\n",
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312250003 |Magnetic resonance imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id( <<442083009 |Anatomical or acquired body structure (body structure)|) @procSite]]}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Computed tomography venography of $procSite$ (procedure)",
+        "termTemplate": "Magnetic resonance imaging of $procSite$ (procedure)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -18,7 +18,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "CT venography of $procSite$",
+        "termTemplate": "MRI of $procSite$",
         "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -28,18 +28,8 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "Computed tomography venography of $procSite$",
+        "termTemplate": "Magnetic resonance imaging of $procSite$",
         "caseSignificance": "CASE_INSENSITIVE",
-        "acceptabilityMap": {
-          "900000000000508004": "ACCEPTABLE",
-          "900000000000509007": "ACCEPTABLE"
-        }
-      },
-      {
-        "type": "SYNONYM",
-        "lang": "en",
-        "termTemplate": "CT venogram of $procSite$",
-        "caseSignificance": "ENTIRE_TERM_CASE_SENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "ACCEPTABLE",
           "900000000000509007": "ACCEPTABLE"

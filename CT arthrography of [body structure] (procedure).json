@@ -1,5 +1,5 @@
 {
-  "name": "CT arthrography of [body structure]",
+  "name": "CT arthrography of [body structure] (procedure)",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<39352004 |Joint structure (body structure)|) @procSite]]\n\t}\n",
   "conceptOutline": {
