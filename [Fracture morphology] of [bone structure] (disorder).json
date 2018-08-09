@@ -1,0 +1,46 @@
+{
+  "name": "[Fracture morphology] of [bone structure] (disorder)",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n{\n\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id(<<64572001 |Disease (disorder)| OR <<272379006 |Event (event)|) @dueTo]]\t},\n\t[[~1..1]] {\n\t [[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<72704001 |Fracture (morphologic abnormality)|) @fractureMorphology]],\n\t [[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<272673000 |Bone structure (body structure)|) @boneStructure]],\n\t [[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<<282032007 |Periods of life (qualifier value)|) @occurrence]]}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$fractureMorphology$ of $boneStructure$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$fractureMorphology$ of $boneStructure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "fractureMorphology",
+      "displayName": "[fractureMorphology]",
+      "takeFSNFromSlot": "fractureMorphology",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "boneStructure",
+      "displayName": "[boneStructure]",
+      "takeFSNFromSlot": "boneStructure",
+      "removeParts": [
+      ]
+    }
+  ]
+}
