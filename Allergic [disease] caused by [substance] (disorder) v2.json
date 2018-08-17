@@ -1,0 +1,53 @@
+{
+  "name": "Allergic [disease] caused by [substance] (disorder) V2",
+  "version": 1,
+  "logicalTemplate":"64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<23583003 |Inflammation (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = [[+id(<<472964009 |Allergic process (qualifier value)|) @pathologicalProcess]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Allergic $morphology$ of $bodyStructure$ caused by $substance$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Allergic $morphology$ of $bodyStructure$ caused by $substance$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+  	{
+      "name": "morphology",
+      "displayName": "[morphology]",
+      "takeFSNFromSlot": "morphology",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[bodyStructure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "substance",
+      "displayName": "[substance]",
+      "takeFSNFromSlot": "substance",
+      "removeParts": [
+      ]
+    }
+  ]
+}

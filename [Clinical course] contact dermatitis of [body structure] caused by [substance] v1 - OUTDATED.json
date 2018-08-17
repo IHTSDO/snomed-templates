@@ -1,0 +1,53 @@
+{
+  "name": "[Clinical course] contact dermatitis of [body structure] caused by [substance] v1 - OUTDATED",
+  "version": 1,
+  "logicalTemplate":"40275004 |Contact dermatitis (disorder)|:\n\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @clinicalCourse]],\n\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t[[~1..*]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = 23583003 |Inflammation (morphologic abnormality)|,\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = [[+id(<<472963003 |Hypersensitivity process (qualifier value)|) @pathologicalProcess]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$clinicalCourse$ contact dermatitis of $bodyStructure$ caused by $substance$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$clinicalCourse$ contact dermatitis of $bodyStructure$ caused by $substance$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "clinicalCourse",
+      "displayName": "[clinicalCourse]",
+      "takeFSNFromSlot": "clinicalCourse",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[bodyStructure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "substance",
+      "displayName": "[substance]",
+      "takeFSNFromSlot": "substance",
+      "removeParts": [
+      ]
+    }
+  ]
+}
