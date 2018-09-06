@@ -8,7 +8,7 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$clinicalCourse$ contact dermatitis of $bodyStructure$ caused by $substance$ (disorder)",
+        "termTemplate": "$course$ contact dermatitis of $body structure$ caused by $substance$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -18,7 +18,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$clinicalCourse$ contact dermatitis of $bodyStructure$ caused by $substance$",
+        "termTemplate": "$course$ contact dermatitis of $body structure$ caused by $substance$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -29,17 +29,25 @@
   },
   "lexicalTemplates": [
     {
-      "name": "clinicalCourse",
-      "displayName": "[clinicalCourse]",
+      "name": "course",
+      "displayName": "[course]",
       "takeFSNFromSlot": "clinicalCourse",
       "removeParts": [
+      ],
+      "removeFromTermTemplateWhenSlotAbsent":[
+      	"$course$"
       ]
     },
     {
-      "name": "bodyStructure",
-      "displayName": "[bodyStructure]",
+      "name": "body structure",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
+      	"Structure of",
+      	"structure"
+      ],
+      "removeFromTermTemplateWhenSlotAbsent":[
+      	"of $body structure$"
       ]
     },
     {
@@ -47,6 +55,9 @@
       "displayName": "[substance]",
       "takeFSNFromSlot": "substance",
       "removeParts": [
+      ],
+      "removeFromTermTemplateWhenSlotAbsent":[
+      	"caused by $substance$"
       ]
     }
   ]
