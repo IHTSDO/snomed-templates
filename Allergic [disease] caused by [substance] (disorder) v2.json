@@ -40,6 +40,8 @@
       "displayName": "[bodyStructure]",
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
+      	"Structure of",
+      	"structure"
       ]
     },
     {
@@ -47,6 +49,9 @@
       "displayName": "[substance]",
       "takeFSNFromSlot": "substance",
       "removeParts": [
+      ],
+      "removeFromTermTemplateWhenSlotAbsent":[
+      	"caused by $substance$"
       ]
     }
   ]
