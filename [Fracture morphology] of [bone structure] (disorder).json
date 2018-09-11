@@ -1,7 +1,7 @@
 {
   "name": "[Fracture morphology] of [bone structure] (disorder)",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n[[~1..*]]\t{\n\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<72704001 |Fracture (morphologic abnormality)|) @fractureMorphology]],\n\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<272673000 |Bone structure (body structure)|) @boneStrcture]],\n\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<<282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n[[~1..*]]\t{\n\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<72704001 |Fracture (morphologic abnormality)|) @fractureMorphology]],\n\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<272673000 |Bone structure (body structure)|) @boneStructure]],\n\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<<282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -40,6 +40,8 @@
       "displayName": "[boneStructure]",
       "takeFSNFromSlot": "boneStructure",
       "removeParts": [
+      	"Structure of",
+      	"structure"
       ]
     },
     {
