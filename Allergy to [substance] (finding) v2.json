@@ -1,6 +1,5 @@
 {
   "name": "Allergy to [substance] (finding)",
-  "domain": "<<419199007 |Allergy to substance (disorder)|",
   "version": 2,
   "logicalTemplate": "420134006 |Propensity to adverse reactions (finding)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 719722006 |Has realization (attribute)| = 472964009 |Allergic process (qualifier value)|,\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n\n",
   "conceptOutline": {
