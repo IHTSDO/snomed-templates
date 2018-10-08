@@ -1,5 +1,6 @@
 {
   "name": "History of [procedure] (situation)",
+  "domain": "<416940007 |Past history of procedure (situation)|",
   "version": 1,
   "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t363589002 |Associated procedure (attribute)| = [[+id(<71388002 |Procedure (procedure)|) @procedure]],\n\t\t408731000 |Temporal context (attribute)| = [[+id(<<410513005 |In the past (qualifier value)|) @past]],\n\t\t408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 410604004 |Subject of record (person)|\n\t}\n",
   "conceptOutline": {

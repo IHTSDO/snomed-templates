@@ -1,5 +1,6 @@
 {
   "name": "Allergic [disease] caused by [substance] (disorder) v2",
+   "domain": "<<421095001|Allergic disorder by body site affected (disorder)|",
   "version": 2,
   "logicalTemplate":"64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = [[+id(<<472964009 |Allergic process (qualifier value)|) @pathologicalProcess]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
   "conceptOutline": {
