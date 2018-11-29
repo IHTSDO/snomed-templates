@@ -48,12 +48,7 @@
     {
       "name": "periodsOfLife",
       "displayName": "[periodsOfLife]",
-      "takeFSNFromSlot": "periodsOfLife",
-      "removeParts": [
-      ],
-      "removeFromTermTemplateWhenSlotAbsent":[
-      	"$periodsOfLife$"
-      ]
+      "takeFSNFromSlot": "periodsOfLife" 
     }
   ]
 }

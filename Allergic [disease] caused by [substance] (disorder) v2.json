@@ -32,9 +32,7 @@
   	{
       "name": "morphology",
       "displayName": "[morphology]",
-      "takeFSNFromSlot": "morphology",
-      "removeParts": [
-      ]
+      "takeFSNFromSlot": "morphology"
     },
     {
       "name": "bodyStructure",
@@ -49,10 +47,12 @@
       "name": "substance",
       "displayName": "[substance]",
       "takeFSNFromSlot": "substance",
-      "removeParts": [
-      ],
-      "removeFromTermTemplateWhenSlotAbsent":[
-      	"caused by $substance$"
+      "termReplacements": [
+      	{
+      		"existingTerm": "caused by $substance$",
+      		"replacement": "",
+      		"slotAbsent": "true"
+      	}
       ]
     }
   ]

@@ -32,12 +32,7 @@
     {
       "name": "course",
       "displayName": "[course]",
-      "takeFSNFromSlot": "clinicalCourse",
-      "removeParts": [
-      ],
-      "removeFromTermTemplateWhenSlotAbsent":[
-      	"$course$"
-      ]
+      "takeFSNFromSlot": "clinicalCourse"
     },
     {
       "name": "body structure",
@@ -47,18 +42,24 @@
       	"Structure of",
       	"structure"
       ],
-      "removeFromTermTemplateWhenSlotAbsent":[
-      	"of $body structure$"
+      "termReplacements": [
+      	{
+      		"existingTerm": "of $body structure$",
+      		"replacement": "",
+      		"whenSlotAbsent": "true"
+      	}
       ]
     },
     {
       "name": "substance",
       "displayName": "[substance]",
       "takeFSNFromSlot": "substance",
-      "removeParts": [
-      ],
-      "removeFromTermTemplateWhenSlotAbsent":[
-      	"caused by $substance$"
+      "termReplacements": [
+      	{
+      		"existingTerm": "caused by $substance$",
+      		"replacement": "",
+      		"whenSlotAbsent": "true"
+      	}
       ]
     }
   ]

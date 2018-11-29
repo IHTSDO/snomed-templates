@@ -1,0 +1,73 @@
+{
+  "name": "Infection caused by [bacteria] (disorder) v2",
+  "domain": "<< 301811001 |Bacterial infection by site (disorder)| ",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @clinicalCourse]]\n\t[[~1..1]] {\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @associatedMorphology]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @causativeAgent]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @occurrence]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$course$ $periods of life$ $morphology$ of $body structure$ caused by $bacteria$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$course$ $periods of life$ $morphology$ of $body structure$ caused by $bacteria$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "periods of life",
+      "displayName": "[Periods of life]",
+      "takeFSNFromSlot": "occurrence"
+    },
+    {
+      "name": "course",
+      "displayName": "[Course]",
+      "takeFSNFromSlot": "clinicalCourse"
+    },
+    {
+      "name": "morphology",
+      "displayName": "[morphology]",
+      "takeFSNFromSlot": "associatedMorphology",
+      "termReplacements": [
+      	{
+      		"existingTerm": "$morphology$",
+      		"replacement": "infection",
+      		"slotAbsent": "true",
+      		"slotValues":[
+      			"409774005",
+      			"23583003"
+      		]
+      	}
+      ]
+    },
+    {
+      "name": "body structure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "findingSite",
+      "removeParts": [
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "bacteria",
+      "displayName": "[bacteria]",
+      "takeFSNFromSlot": "causativeAgent"
+    }
+  ]
+}
