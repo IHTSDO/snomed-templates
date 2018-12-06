@@ -9,7 +9,7 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$periods of life$ $course$ $morphology$ of $body structure$ caused by $virus$ (disorder)",
+        "termTemplate": "$periodsOfLife$ $course$ $morphology$ of $bodyStructure$ caused by $virus$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$periods of life$ $course$ $morphology$ of $body structure$ caused by $virus$",
+        "termTemplate": "$periodsOfLife$ $course$ $morphology$ of $bodyStructure$ caused by $virus$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -30,13 +30,13 @@
   },
   "lexicalTemplates": [
     {
-      "name": "periods of life",
-      "displayName": "[Periods of life]",
+      "name": "periodsOfLife",
+      "displayName": "[periodsOfLife]",
       "takeFSNFromSlot": "periodsOfLife"
     },
     {
       "name": "course",
-      "displayName": "[Course]",
+      "displayName": "[course]",
       "takeFSNFromSlot": "course"
     },
     {
@@ -56,8 +56,8 @@
       ]
     },
     {
-      "name": "body structure",
-      "displayName": "[body structure]",
+      "name": "bodyStructure",
+      "displayName": "[bodyStructure]",
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
         "structure of",

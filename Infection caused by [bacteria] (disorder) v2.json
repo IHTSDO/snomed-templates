@@ -1,15 +1,15 @@
 {
   "name": "Infection caused by [bacteria] (disorder) v2",
   "domain": "<< 301811001 |Bacterial infection by site (disorder)| ",
-  "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @clinicalCourse]]\n\t[[~1..1]] {\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @associatedMorphology]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @causativeAgent]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @occurrence]]\n\t}\n",
+  "version": 2,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t[[~1..1]] {\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @bacteria]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$course$ $periods of life$ $morphology$ of $body structure$ caused by $bacteria$ (disorder)",
+        "termTemplate": "$course$ $periodsOfLife$ $morphology$ of $bodyStructure$ caused by $bacteria$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$course$ $periods of life$ $morphology$ of $body structure$ caused by $bacteria$",
+        "termTemplate": "$course$ $periodsOfLife$ $morphology$ of $bodyStructure$ caused by $bacteria$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -29,20 +29,20 @@
     ]
   },
   "lexicalTemplates": [
-    {
-      "name": "periods of life",
-      "displayName": "[Periods of life]",
-      "takeFSNFromSlot": "occurrence"
+  	{
+      "name": "course",
+      "displayName": "[course]",
+      "takeFSNFromSlot": "course"
     },
     {
-      "name": "course",
-      "displayName": "[Course]",
-      "takeFSNFromSlot": "clinicalCourse"
+      "name": "periodsOfLife",
+      "displayName": "[periodsOfLife]",
+      "takeFSNFromSlot": "periodsOfLife"
     },
     {
       "name": "morphology",
       "displayName": "[morphology]",
-      "takeFSNFromSlot": "associatedMorphology",
+      "takeFSNFromSlot": "morphology",
       "termReplacements": [
       	{
       		"existingTerm": "$morphology$",
@@ -56,9 +56,9 @@
       ]
     },
     {
-      "name": "body structure",
+      "name": "bodyStructure",
       "displayName": "[body structure]",
-      "takeFSNFromSlot": "findingSite",
+      "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
         "structure of",
         "structure"
@@ -67,7 +67,7 @@
     {
       "name": "bacteria",
       "displayName": "[bacteria]",
-      "takeFSNFromSlot": "causativeAgent"
+      "takeFSNFromSlot": "bacteria"
     }
   ]
 }
