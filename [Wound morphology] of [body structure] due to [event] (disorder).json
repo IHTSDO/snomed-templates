@@ -1,0 +1,59 @@
+{
+  "name": "[Wound morphology] of [body structure] due to [event] (disorder)",
+  "domain": "<< 416462003 |Wound (disorder)|",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\\n\\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id(<< 272379006 |Event (event)|) @event]],\\n\\t{\\n\\t\\t116676008 |Associated morphology (attribute)| = [[+id(<< 13924000 |Wound (morphologic abnormality)|) @woundMorphology]],\\n\\t\\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<< 123037004 |Body structure (body structure)|) @bodyStructure]],\\n\\t\\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<< 260787004 |Physical object (physical object)| OR <<  78621006 |Physical force (physical force)| OR <<  105590001 |Substance (substance)|) @physicalObject]],\\n\\t\\t[[~0..1]] 370135005 |Pathological process (attribute)| = [[+id(<< 441862004 |Infectious process (qualifier value)|)]]\\n\\t}\\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$woundMorphology$ of $bodyStructure$ due to $event$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$woundMorphology$ of $bodyStructure$ due to $event$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "woundMorphology",
+      "displayName": "[Wound morphology]",
+      "takeFSNFromSlot": "woundMorphology",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "event",
+      "displayName": "[event]",
+      "takeFSNFromSlot": "event",
+      "termReplacements": [
+        {
+          "existingTerm": " due to $event$",
+          "replacement": "",
+          "whenSlotAbsent": "true"
+        }
+      ]
+    }
+  ]
+}
