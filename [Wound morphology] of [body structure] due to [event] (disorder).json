@@ -9,7 +9,7 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$woundMorphology$ of $bodyStructure$ due to $event$ (disorder)",
+        "termTemplate": "$physicalObject$ $woundMorphology$ of $bodyStructure$ due to $event$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$woundMorphology$ of $bodyStructure$ due to $event$",
+        "termTemplate": "$physicalObject$ $woundMorphology$ of $bodyStructure$ due to $event$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -29,6 +29,18 @@
     ]
   },
   "lexicalTemplates": [
+    {
+      "name": "physicalObject",
+      "displayName": "[Physical object]",
+      "takeFSNFromSlot": "physicalObject",
+		"termReplacements": [
+			{
+				"existingTerm": "$physicalObject$ ",
+				"replacement": "",
+				"whenSlotAbsent": "true"
+			}
+		]
+    },
     {
       "name": "woundMorphology",
       "displayName": "[Wound morphology]",
