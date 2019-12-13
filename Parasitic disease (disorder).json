@@ -1,0 +1,81 @@
+{
+  "name": "Parasitic disease (disorder)",
+  "domain": "<<  17322007 |Disease caused by parasite (disorder)|",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @clinicalCourse]],\n\t\t[[~1..1]]\n\t\t{\n\t\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 442614005 |Parasitic process (qualifier value)|,\n\t\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<410607006 |Organism (organism)|) @organism]],\n\t\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @associatedMorphology]],\n\t\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @occurrence]]\n\t\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$course$ $occurrence$ $morphology$ of $body structure$ caused by $organism$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$course$ $occurrence$ $morphology$ of $body structure$ caused by $organism$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "course",
+      "displayName": "[Course]",
+      "takeFSNFromSlot": "clinicalCourse"
+	  
+    },
+	{
+      "name": "occurrence",
+      "displayName": "[Period of life]",
+      "takeFSNFromSlot": "occurrence"
+    },
+	{
+      "name": "morphology",
+      "displayName": "[Morphology]",
+      "takeFSNFromSlot": "associatedMorphology",
+	  "termReplacements": [
+      	{
+      		"existingTerm": "$morphology$",
+      		"replacement": "infection",
+      		"slotAbsent": "true",
+      		"slotValues":[
+      			"409774005",
+      			"23583003"
+      		]
+      	}
+      ]
+    },
+	{
+      "name": "body structure",
+      "displayName": "[Body structure]",
+      "takeFSNFromSlot": "bodyStructure",
+	  "removeParts": [
+      	"Structure of",
+      	"structure"
+      ],
+	  "termReplacements": [
+      	{
+      		"existingTerm": "of $body structure$",
+      		"replacement": "",
+      		"whenSlotAbsent": "true"
+      	}
+      ]
+    },
+	{
+      "name": "organism",
+      "displayName": "[organism]",
+      "takeFSNFromSlot": "organism"
+    }
+  ]
+}
