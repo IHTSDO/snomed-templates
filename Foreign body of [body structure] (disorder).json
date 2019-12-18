@@ -1,0 +1,48 @@
+{
+  "name": "Foreign body of [body structure] (disorder)",
+  "domain":"<<125670008 |Foreign body (disorder)|",
+  "version": 1,
+  "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..1]] { [[~0..1]]  363698007 |Finding site (attribute)|  = [[ +id( <  123037004 |Body structure (body structure)| ) @site]] , [[~1..1]]  116676008 |Associated morphology (attribute)|  = [[ +id( <<  19227008 |Foreign body (morphologic abnormality)|  ) @morph]]}",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $body structure$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $body structure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "morphology",
+      "displayName": "[Morphology]",
+      "takeFSNFromSlot": "morph"
+    },    
+    {
+      "name": "body structure",
+      "displayName": "[Body structure]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+      	"structure"
+      ]
+    }
+  ]
+}
