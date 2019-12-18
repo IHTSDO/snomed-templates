@@ -9,7 +9,17 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "Nonallergic hypersensitivity to $substance$ (finding)",
+        "termTemplate": "Non-allergic hypersensitivity to $substance$ (finding)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Non-allergic hypersensitivity to $substance$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -22,8 +32,8 @@
         "termTemplate": "Nonallergic hypersensitivity to $substance$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
-          "900000000000508004": "PREFERRED",
-          "900000000000509007": "PREFERRED"
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
         }
       },
       {
