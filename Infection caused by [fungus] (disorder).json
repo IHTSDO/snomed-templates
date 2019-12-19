@@ -9,7 +9,7 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$course$ $periodsOfLife$ of $bodyStructure$ caused by $fungus$ (disorder)",
+        "termTemplate": "$course$ $periodsOfLife$ infection of $bodyStructure$ caused by $fungus$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$course$ $periodsOfLife$ of $bodyStructure$ caused by $fungus$",
+        "termTemplate": "$course$ $periodsOfLife$ infection of $bodyStructure$ caused by $fungus$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
