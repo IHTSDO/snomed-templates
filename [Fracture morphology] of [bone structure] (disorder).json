@@ -41,7 +41,8 @@
       "displayName": "[boneStructure]",
       "takeFSNFromSlot": "boneStructure",
       "removeParts": [
-      	"Structure of",
+        "Structure of",
+        "structure of",
       	"structure"
       ]
     },

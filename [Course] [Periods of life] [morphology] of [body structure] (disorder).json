@@ -56,6 +56,9 @@
       "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
+        "Structure of",
+        "structure of",
+      	"structure"
       ]
     }
   ]
