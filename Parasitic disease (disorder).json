@@ -60,19 +60,20 @@
       "name": "body structure",
       "displayName": "[Body structure]",
       "takeFSNFromSlot": "bodyStructure",
-	  "removeParts": [
-      	"Structure of",
-      	"structure"
-      ],
-	  "termReplacements": [
-      	{
-      		"existingTerm": "of $body structure$",
-      		"replacement": "",
-      		"whenSlotAbsent": "true"
-      	}
-      ]
-    },
-	{
+      "removeParts": [
+          "Structure of",
+          "structure of",
+          "structure"
+        ],
+      "termReplacements": [
+          {
+            "existingTerm": "of $body structure$",
+            "replacement": "",
+            "whenSlotAbsent": "true"
+          }
+        ]
+      },
+	  {
       "name": "organism",
       "displayName": "[organism]",
       "takeFSNFromSlot": "organism"
