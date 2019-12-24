@@ -1,0 +1,63 @@
+{
+  "name": "Hematoma of [body structure] due to [disorder] (disorder)",
+  "domain": "<<385494008 |Hematoma (disorder)|",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)| : {[[~0..1]] 246454002 |Occurrence (attribute)| =[[+id(<282032007 |Periods of life (qualifier value)| ) @occurrence]], [[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @site]], [[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<35566002 |Hematoma (morphologic abnormality)| ) @morphology ]]}, {[[~0..1]] 42752001 |Due to (attribute)|  = [[+id(<64572001 |Disease (disorder)| ) @dueto ]]}",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$periodsOfLife$ $morphology$ of $bodyStructure$ due to $disorder$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$periodsOfLife$ $morphology$ of $bodyStructure$ due to $disorder$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "periodsOfLife",
+      "displayName": "[Periods of life]",
+      "takeFSNFromSlot": "occurrence",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "morphology",
+      "displayName": "[morphology]",
+      "takeFSNFromSlot": "morphology",
+      "removeParts": [
+      ]
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "disorder",
+      "displayName": "[disorder]",
+      "takeFSNFromSlot": "dueto",
+      "removeParts": [
+      ]
+    }
+  ]
+}
