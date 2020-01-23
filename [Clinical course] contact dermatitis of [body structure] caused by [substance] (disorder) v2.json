@@ -47,7 +47,7 @@
       	{
       		"existingTerm": "of $body structure$",
       		"replacement": "",
-      		"whenSlotAbsent": "true"
+      		"slotAbsent": "true"
       	}
       ]
     },
@@ -59,7 +59,7 @@
       	{
       		"existingTerm": "caused by $substance$",
       		"replacement": "",
-      		"whenSlotAbsent": "true"
+      		"slotAbsent": "true"
       	}
       ]
     }
