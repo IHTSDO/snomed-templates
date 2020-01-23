@@ -47,7 +47,7 @@
         {
           "existingTerm": "$morphology$",
           "replacement": "infection",
-          "whenSlotAbsent": "true"
+          "slotAbsent": "true"
         }
       ]
     },
