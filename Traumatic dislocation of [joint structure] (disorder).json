@@ -42,8 +42,9 @@
       "displayName": "[joint structure]",
       "takeFSNFromSlot": "site",
       "removeParts": [
-      	"structure of",
-      	"structure"
+        "structure of",
+        "Structure of",
+        "structure"
       ]
     }
   ]

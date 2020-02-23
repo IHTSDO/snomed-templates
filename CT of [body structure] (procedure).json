@@ -44,6 +44,7 @@
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",
+        "Structure of",
         "structure",
         "part of"
       ]

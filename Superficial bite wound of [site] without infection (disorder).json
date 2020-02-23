@@ -46,7 +46,12 @@
 	{
       "name": "site",
       "displayName": "[site]",
-      "takeFSNFromSlot": "site"
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "structure of",
+        "Structure of",
+        "structure"
+      ]
     }
   ]
 }

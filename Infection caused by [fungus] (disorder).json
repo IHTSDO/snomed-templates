@@ -45,6 +45,7 @@
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
         "structure of",
+        "Structure of",
         "structure"
       ]
     },

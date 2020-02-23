@@ -35,7 +35,8 @@
       "takeFSNFromSlot": "site",
       "removeParts": [
         "structure of",
-      	"structure"
+        "Structure of",
+        "structure"
       ]
     }
   ]
