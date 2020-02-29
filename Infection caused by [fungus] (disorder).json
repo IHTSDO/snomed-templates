@@ -1,8 +1,8 @@
 {
   "name": "Infection caused by [fungus] (disorder)",
-  "domain": "<<  3218000 |Mycosis (disorder)| ",
+  "domain": "<<3218000 |Mycosis (disorder)|",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @periodsOfLife]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<414561005 |Kingdom Fungi (organism)|) @fungus]]\n\t},\n\t[[~0..1]] {\n\t\t[[~1..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~0..1]] {\n\t\t[[~1..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t},\n\t[[~1..1]] {\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @periodsOfLife]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<414561005 |Kingdom Fungi (organism)|) @fungus]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -29,20 +29,45 @@
     ]
   },
   "lexicalTemplates": [
-  	{
+    {
       "name": "course",
-      "displayName": "[course]",
-      "takeFSNFromSlot": "course"
+      "displayName": "[Course]",
+      "takeFSNFromSlot": "course",
+      "termReplacements": [
+        {
+          "existingTerm": "$course$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "periodsOfLife",
-      "displayName": "[periodsOfLife]",
-      "takeFSNFromSlot": "periodsOfLife"
+      "displayName": "[periods of life]",
+      "takeFSNFromSlot": "periodsOfLife",
+      "termReplacements": [
+        {
+          "existingTerm": "$periodsOfLife$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "bodyStructure",
       "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
+      "termReplacements": [
+        {
+          "existingTerm": "$bodyStructure$",
+          "replacement": "infection",
+          "slotAbsent": "true",
+          "slotValues": [
+            "409774005",
+            "23583003"
+          ]
+        }
+      ],
       "removeParts": [
         "structure of",
         "Structure of",

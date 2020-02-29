@@ -1,15 +1,15 @@
 {
   "name": "Cataract (disorder)",
-  "domain":"<193570009 |Cataract (disorder)|",
+  "domain": "<193570009 |Cataract (disorder)|",
   "version": 1,
-  "logicalTemplate":"64572001 |Disease (disorder)|: [[~1..2]] { [[~0..1]] 246454002 |Occurrence (attribute)| = [[ +id ( << 282032007 |Periods of life (qualifier value)|) @occurance]], [[~1..1]] 363698007 |Finding site (attribute)| = [[ +id( <<  78076003 |Structure of lens of eye (body structure)| ) @site]] , [[~1..1]] 116676008 |Associated morphology (attribute)| = 128305008 |Abnormally opaque structure (morphologic abnormality)|, [[~0..1]] 370135005 |Pathological process (attribute)| = [[ +id ( << 308489006 |Pathological process (qualifier value)|) @proc]], [[~0..1]] 246075003 |Causative agent (attribute)| = [[ +id ( < 105590001 |Substance (substance)|) @causeAgent]] } , { [[~0..1]] 255234002 |After (attribute)| = [[ +id ( << 404684003 |Clinical finding (finding)| OR << 71388002 |Procedure (procedure)|) @after]] } , { [[~0..1]] 42752001 |Due to (attribute)| = [[ +id (<< 404684003 |Clinical finding (finding)| OR << 272379006 |Event (event)| OR << 71388002 |Procedure (procedure)|) @due]] }",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..2]] {\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<<282032007 |Periods of life (qualifier value)|) @occurrence]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<78076003 |Structure of lens of eye (body structure)|) @site]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = 128305008 |Abnormally opaque structure (morphologic abnormality)|,\n\t\t[[~0..1]] 370135005 |Pathological process (attribute)| = [[+id(<<308489006 |Pathological process (qualifier value)|) @proc]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @causeAgent]]\n\t},\n\t{\n\t\t[[~0..1]] 255234002 |After (attribute)| = [[+id(<<404684003 |Clinical finding (finding)| OR <<71388002 |Procedure (procedure)|) @after]]\n\t},\n\t{\n\t\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id(<<404684003 |Clinical finding (finding)| OR <<272379006 |Event (event)| OR <<71388002 |Procedure (procedure)|) @due]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$occurance$ cataract of $site$ due to $due$ and following $after$ caused by $causeAgent$ (disorder)",
+        "termTemplate": "$occurrence$ cataract of $site$ due to $due$ and following $after$ caused by $causeAgent$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$occurance$ cataract of $site$ due to $due$ and following $after$ caused by $causeAgent$",
+        "termTemplate": "$occurrence$ cataract of $site$ due to $due$ and following $after$ caused by $causeAgent$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -30,15 +30,22 @@
   },
   "lexicalTemplates": [
     {
-      "name": "occurance",
+      "name": "occurrence",
       "displayName": "[Periods of life]",
-      "takeFSNFromSlot": "occurance"
-    },    
+      "takeFSNFromSlot": "occurrence",
+      "termReplacements": [
+        {
+          "existingTerm": "$occurrence$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },
     {
       "name": "site",
-      "displayName": "[Body structure]",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "site",
-      "removeParts": [        
+      "removeParts": [
         "structure of",
         "Structure of",
         "structure"
@@ -47,17 +54,38 @@
     {
       "name": "due",
       "displayName": "[due to association target]",
-      "takeFSNFromSlot": "due"
+      "takeFSNFromSlot": "due",
+      "termReplacements": [
+        {
+          "existingTerm": "due to $due$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "after",
       "displayName": "[finding/procedure]",
-      "takeFSNFromSlot": "after"
+      "takeFSNFromSlot": "after",
+      "termReplacements": [
+        {
+          "existingTerm": "and following $after$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "causeAgent",
       "displayName": "[substance]",
-      "takeFSNFromSlot": "causeAgent"
-    }    
+      "takeFSNFromSlot": "causeAgent",
+      "termReplacements": [
+        {
+          "existingTerm": "caused by $causeAgent$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    }
   ]
 }

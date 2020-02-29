@@ -34,7 +34,9 @@
       "displayName": "[morphology]",
       "takeFSNFromSlot": "morphology",
       "removeParts": [
-        "congenital"
+        "congenital",
+        "Congenital",
+        " - category"
       ]
     },
     {

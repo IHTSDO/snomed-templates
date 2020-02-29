@@ -2,7 +2,7 @@
   "name": "Incisional hernia of [abdominal wall] (disorder)",
   "domain": "<236037000 |Incisional hernia (disorder)| ",
   "version": 1,
-  "logicalTemplate": "116223007 |Complication (disorder)|:\n\t[[~0..1]] {\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<818993005 |Structure of organ within abdominopelvic cavity (body structure)|) @site1]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<414403008 |Herniated structure (morphologic abnormality)|) @morp1]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<83908009 |Abdominal wall structure (body structure)|) @site2]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = 414402003 |Hernial opening (morphologic abnormality)|\t\t\n\t}\n\t,\n\t{\n\t\t[[~1..1]] 255234002 |After (attribute)| = [[+id(<<387713003 |Surgical procedure (procedure)|) @after]]\n\t},\n\t{\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t},\n\t{\n\t\t[[~0..1]] 42752001 |Due to (attribute)| = 271618001 |Impaired wound healing (finding)|\n\t}\n",
+  "logicalTemplate": "116223007 |Complication (disorder)|:\n\t{\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t},\n\t{\n\t\t[[~0..1]] 42752001 |Due to (attribute)| = 271618001 |Impaired wound healing (finding)|\n\t},\n\t{\n\t\t[[~1..1]] 255234002 |After (attribute)| = [[+id(<<387713003 |Surgical procedure (procedure)|) @after]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<818993005 |Structure of organ within abdominopelvic cavity (body structure)|) @site1]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<414403008 |Herniated structure (morphologic abnormality)|) @morphology]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<83908009 |Abdominal wall structure (body structure)|) @site2]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = 414402003 |Hernial opening (morphologic abnormality)|\t\t\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -32,20 +32,27 @@
     {
       "name": "clinicalCourse",
       "displayName": "[Clinical course]",
-      "takeFSNFromSlot": "course"
+      "takeFSNFromSlot": "course",
+      "termReplacements": [
+        {
+          "existingTerm": "$clinicalCourse$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "herniatedStructureMorphology",
       "displayName": "[herniated structure morphology]",
-      "takeFSNFromSlot": "morp1",
+      "takeFSNFromSlot": "morphology",
       "termReplacements": [
-      	{
-      		"existingTerm": "$herniatedStructureMorphology$",
-      		"replacement": "",      		
-      		"slotValues":[
-      			"414403008"
-      		]
-        }        
+        {
+          "existingTerm": "$herniatedStructureMorphology$",
+          "replacement": "",
+          "slotValues": [
+            "414403008"
+          ]
+        }
       ],
       "removeParts": [
         "hernia"
@@ -55,6 +62,13 @@
       "name": "abdominalViscusStructure",
       "displayName": "[abdominal viscus structure]",
       "takeFSNFromSlot": "site1",
+      "termReplacements": [
+        {
+          "existingTerm": "of $abdominalViscusStructure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "structure of",
         "Structure of",

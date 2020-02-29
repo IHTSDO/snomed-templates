@@ -1,8 +1,8 @@
 {
   "name": "Allergic [disease] caused by [substance] (disorder) v2",
-   "domain": "<<  781474001 |Allergic disorder (disorder)|",
+  "domain": "<<781474001 |Allergic disorder (disorder)|",
   "version": 2,
-  "logicalTemplate":"64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = [[+id(<<472964009 |Allergic process (qualifier value)|) @pathologicalProcess]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = [[+id(<<472964009 |Allergic process (qualifier value)|) @pathologicalProcess]],\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -29,19 +29,19 @@
     ]
   },
   "lexicalTemplates": [
-  	{
+    {
       "name": "morphology",
       "displayName": "[morphology]",
       "takeFSNFromSlot": "morphology"
     },
     {
       "name": "bodyStructure",
-      "displayName": "[bodyStructure]",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
       "removeParts": [
         "Structure of",
         "structure of",
-      	"structure"
+        "structure"
       ]
     },
     {
@@ -49,11 +49,11 @@
       "displayName": "[substance]",
       "takeFSNFromSlot": "substance",
       "termReplacements": [
-      	{
-      		"existingTerm": "caused by $substance$",
-      		"replacement": "",
-      		"slotAbsent": "true"
-      	}
+        {
+          "existingTerm": "caused by $substance$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
       ]
     }
   ]

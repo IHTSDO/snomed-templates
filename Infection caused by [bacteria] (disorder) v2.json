@@ -1,8 +1,8 @@
 {
   "name": "Infection caused by [bacteria] (disorder) v2",
-  "domain": "<< 301811001 |Bacterial infection by site (disorder)| ",
+  "domain": "<<301811001 |Bacterial infection by site (disorder)| ",
   "version": 2,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t\t[[~0..1]] {\n\t\t[[~1..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @bacteria]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~0..1]] {\n\t\t[[~1..1]] 263502005 |Clinical course (attribute)| = [[+id(<288524001 |Courses (qualifier value)|) @course]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @bacteria]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -29,36 +29,57 @@
     ]
   },
   "lexicalTemplates": [
-  	{
+    {
       "name": "course",
-      "displayName": "[course]",
-      "takeFSNFromSlot": "course"
+      "displayName": "[Course]",
+      "takeFSNFromSlot": "course",
+      "termReplacements": [
+        {
+          "existingTerm": "$course$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "periodsOfLife",
-      "displayName": "[periodsOfLife]",
-      "takeFSNFromSlot": "periodsOfLife"
+      "displayName": "[periods of life]",
+      "takeFSNFromSlot": "periodsOfLife",
+      "termReplacements": [
+        {
+          "existingTerm": "$periodsOfLife$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "morphology",
       "displayName": "[morphology]",
       "takeFSNFromSlot": "morphology",
       "termReplacements": [
-      	{
-      		"existingTerm": "$morphology$",
-      		"replacement": "infection",
-      		"slotAbsent": "true",
-      		"slotValues":[
-      			"409774005",
-      			"23583003"
-      		]
-      	}
+        {
+          "existingTerm": "$morphology$",
+          "replacement": "infection",
+          "slotAbsent": "true",
+          "slotValues": [
+            "409774005",
+            "23583003"
+          ]
+        }
       ]
     },
     {
       "name": "bodyStructure",
       "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
+      "termReplacements": [
+        {
+          "existingTerm": "of $bodyStructure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "structure of",
         "Structure of",

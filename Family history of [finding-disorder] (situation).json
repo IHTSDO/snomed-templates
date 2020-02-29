@@ -1,6 +1,6 @@
 {
   "name": "Family history of [finding/disorder] (situation)",
-  "domain": "<416471007 |Family history of clinical finding (situation)| ",
+  "domain": "<416471007 |Family history of clinical finding (situation)|",
   "version": 1,
   "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t246090004 |Associated finding (attribute)| = [[+id(<404684003 |Clinical finding (finding)|) @finding]],\n\t\t408731000 |Temporal context (attribute)| = 410511007 |Current or past (actual) (qualifier value)|,\n\t\t408729009 |Finding context (attribute)| = 410515003 |Known present (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 444148008 |Person in family of subject (person)|\n\t}\n",
   "conceptOutline": {
@@ -34,7 +34,8 @@
       "displayName": "[finding/disorder]",
       "takeFSNFromSlot": "finding",
       "removeParts": [
-        "finding of"
+        "finding of",
+        "Finding of"
       ]
     }
   ]

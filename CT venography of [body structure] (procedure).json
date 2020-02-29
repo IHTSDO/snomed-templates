@@ -1,8 +1,8 @@
 {
   "name": "CT venography of [body structure] (procedure)",
-  "domain": "<431676002 | Computed tomography venography (procedure) |",
+  "domain": "<431676002 |Computed tomography venography (procedure)|",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id( <<119553000 |Venous system structure (body structure)|) @procSite]]}\n",
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<119553000 |Venous system structure (body structure)|) @procSite]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -51,7 +51,7 @@
   "lexicalTemplates": [
     {
       "name": "procSite",
-      "displayName": "body structure",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",

@@ -1,15 +1,15 @@
 {
   "name": "Foreign body of [body structure] (disorder)",
-  "domain":"<<125670008 |Foreign body (disorder)|",
+  "domain": "<<125670008 |Foreign body (disorder)|",
   "version": 1,
-  "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..1]] { [[~0..1]]  363698007 |Finding site (attribute)|  = [[ +id( <  123037004 |Body structure (body structure)| ) @site]] , [[~1..1]]  116676008 |Associated morphology (attribute)|  = [[ +id( <<  19227008 |Foreign body (morphologic abnormality)|  ) @morph]]}",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @site]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<19227008 |Foreign body (morphologic abnormality)|) @morph]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$morphology$ of $body structure$ (disorder)",
+        "termTemplate": "$morphology$ of $bodyStructure$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$morphology$ of $body structure$",
+        "termTemplate": "$morphology$ of $bodyStructure$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -33,15 +33,22 @@
       "name": "morphology",
       "displayName": "[Morphology]",
       "takeFSNFromSlot": "morph"
-    },    
+    },
     {
-      "name": "body structure",
-      "displayName": "[Body structure]",
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "site",
+      "termReplacements": [
+        {
+          "existingTerm": "of $bodyStructure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "Structure of",
         "structure of",
-      	"structure"
+        "structure"
       ]
     }
   ]

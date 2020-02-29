@@ -32,9 +32,7 @@
     {
       "name": "procedure",
       "displayName": "[procedure]",
-      "takeFSNFromSlot": "procedure",
-      "removeParts": [
-      ]
+      "takeFSNFromSlot": "procedure"
     }
   ]
 }

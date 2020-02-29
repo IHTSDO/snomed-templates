@@ -2,7 +2,7 @@
   "name": "CT guided [procedure] of [body structure] (procedure)",
   "domain": "<258176004 |Computerized tomography guidance (procedure)| ",
   "version": 1,
-  "logicalTemplate": "71388002 |Procedure|: [[~1..1]] { 260686004 |Method| = 312251004 |Computed tomography imaging action|, [[~1..1]] 405813007 |Procedure site - Direct| = [[+id(<< 442083009 |Anatomical or acquired body structure|) @procSite]], 363703001 |Has intent| = 429892002 |Guidance intent| }, { 260686004 |Method| = [[+id (<< 129264002 |Action|) @action]], [[~1..1]] 405813007 |Procedure site - Direct| = [[+id(<< 442083009 |Anatomical or acquired body structure|) @procSite]] }",
+  "logicalTemplate": "71388002 |Procedure|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method| = 312251004 |Computed tomography imaging action|,\n\t\t[[~0..1]] 405813007 |Procedure site - Direct| = [[+id(<<442083009 |Anatomical or acquired body structure|) @procSite]],\n\t\t[[~1..1]] 363703001 |Has intent| = 429892002 |Guidance intent|\n\t},\n\t{\n\t\t[[~1..1]] 260686004 |Method| = [[+id(<129264002 |Action|) @action]],\n\t\t[[~0..1]] 405813007 |Procedure site - Direct| = [[+id(<<442083009 |Anatomical or acquired body structure|) @procSite]]\n\t}\n",
   "conceptOutline": {
     "descriptions": [
       {
@@ -40,17 +40,25 @@
   "lexicalTemplates": [
     {
       "name": "procSiteTerm",
-      "displayName": "X",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "procSite",
+      "termReplacements": [
+        {
+          "existingTerm": "of $procSiteTerm$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "structure of",
+        "Stucture of",
         "structure",
         "part of"
       ]
     },
     {
       "name": "actionTerm",
-      "displayName": "Procedure",
+      "displayName": "[procedure]",
       "takeFSNFromSlot": "action",
       "removeParts": [
         " - action"

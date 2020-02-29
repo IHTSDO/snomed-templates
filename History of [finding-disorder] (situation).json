@@ -34,7 +34,8 @@
       "displayName": "[finding/disorder]",
       "takeFSNFromSlot": "finding",
       "removeParts": [
-        "finding of"
+        "finding of",
+        "Finding of"
       ]
     }
   ]

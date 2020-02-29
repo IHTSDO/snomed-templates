@@ -2,7 +2,7 @@
   "name": "Fistula of [body structure] [due to] [finding] (disorder)",
   "domain": "<<428794004 |Fistula (disorder)|",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|: [[~1..*]]{ [[~0..1]] 246454002 |Occurrence (attribute)| = [[ +id(<282032007 |Periods of life (qualifier value)|) @occur]], [[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @site]], [[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<118622000 |Fistula (morphologic abnormality)|) @morphology ]], [[~0..1]] 370135005 |Pathological process (attribute)| = [[ +id ( <<308490002 |Pathological developmental process (qualifier value)|) @proc]]}, { [[~0..1]] 255234002 |After (attribute)| = [[+id (<<404684003 |Clinical finding (finding)| or <<71388002 |Procedure (procedure)| ) @after ]] }, { [[~0..1]] 42752001 |Due to (attribute)| = [[+id (<<404684003 |Clinical finding (finding)| or <<71388002 |Procedure (procedure)|) @dueto]] }",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t{\n\t\t[[~0..1]] 255234002 |After (attribute)| = [[+id (<<404684003 |Clinical finding (finding)| or <<71388002 |Procedure (procedure)|) @after ]]\n\t},\n\t{\n\t\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id (<<404684003 |Clinical finding (finding)| or <<71388002 |Procedure (procedure)|) @dueto]]\n\t}\n\t{\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<282032007 |Periods of life (qualifier value)|) @occur]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @site]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<118622000 |Fistula (morphologic abnormality)|) @morphology ]],\n\t\t[[~0..1]] 370135005 |Pathological process (attribute)| = [[+id (<<308490002 |Pathological developmental process (qualifier value)|) @proc]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -33,20 +33,37 @@
       "name": "periodsOfLife",
       "displayName": "[Periods of life]",
       "takeFSNFromSlot": "occur",
-      "removeParts": [
+      "termReplacements": [
+        {
+          "existingTerm": "$periodsOfLife$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
       ]
     },
     {
       "name": "morphology",
       "displayName": "[morphology]",
       "takeFSNFromSlot": "morphology",
-      "removeParts": [
+      "termReplacements": [
+        {
+          "existingTerm": "$morphology$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
       ]
     },
     {
       "name": "bodyStructure",
       "displayName": "[body structure]",
       "takeFSNFromSlot": "site",
+      "termReplacements": [
+        {
+          "existingTerm": "of $bodyStructure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "structure of",
         "Structure of",
@@ -55,16 +72,26 @@
     },
     {
       "name": "dueTofindingOrProcedure",
-      "displayName": " [finding/procedure]",
+      "displayName": "[finding/procedure]",
       "takeFSNFromSlot": "dueto",
-      "removeParts": [
+      "termReplacements": [
+        {
+          "existingTerm": "due to $dueTofindingOrProcedure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
       ]
     },
     {
       "name": "afterFindingOrProcedure",
       "displayName": "[finding/procedure]",
       "takeFSNFromSlot": "after",
-      "removeParts": [
+      "termReplacements": [
+        {
+          "existingTerm": "and following $afterFindingOrProcedure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
       ]
     }
   ]

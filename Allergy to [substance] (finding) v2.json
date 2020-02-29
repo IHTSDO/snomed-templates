@@ -32,9 +32,7 @@
     {
       "name": "substance",
       "displayName": "[substance]",
-      "takeFSNFromSlot": "substance",
-      "removeParts": [
-      ]
+      "takeFSNFromSlot": "substance"
     }
   ]
 }

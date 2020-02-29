@@ -1,15 +1,15 @@
 {
   "name": "Fracture dislocation of [body structure] (disorder)",
-  "domain":"<<263063009 |Fracture dislocation of joint (disorder)|",
+  "domain": "<<263063009 |Fracture dislocation of joint (disorder)|",
   "version": 1,
-  "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..*]] { 116676008 |Associated morphology (attribute)| = [[ +id( <<72704001 |Fracture (morphologic abnormality)| ) @morph1]], 363698007 |Finding site (attribute)| = [[ +id( <<272673000 |Bone structure (body structure)| ) @boneStructure]]} , [[~1..*]] { 116676008 |Associated morphology (attribute)| = [[ +id( <<87642003 |Dislocation (morphologic abnormality)| ) @morph2]], 363698007 |Finding site (attribute)| = [[ +id( <<39352004 |Joint structure (body structure)| ) @jointStructure ]]} , [[~1..1]] {42752001 |Due to (attribute)| = [[ +id( <<773760007 |Traumatic event (event)| ) @due]] }",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] {\n\t\t42752001 |Due to (attribute)| = [[ +id( <<773760007 |Traumatic event (event)| ) @due]]\n\t},\n\t{\n\t\t116676008 |Associated morphology (attribute)| = [[+id(<<72704001 |Fracture (morphologic abnormality)|) @morph1]],\n\t\t363698007 |Finding site (attribute)| = [[+id(<<272673000 |Bone structure (body structure)|) @boneStructure]]\n\t},\n\t{\n\t\t116676008 |Associated morphology (attribute)| = [[+id(<<87642003 |Dislocation (morphologic abnormality)|) @morph2]],\n\t\t363698007 |Finding site (attribute)| = [[+id(<<39352004 |Joint structure (body structure)|) @jointStructure]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$fracture morphology$ $dislocation$ of $joint structure$ (disorder)",
+        "termTemplate": "$fractureMorphology$ $dislocation$ of $jointStructure$ (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,7 +19,7 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$fracture morphology$ $dislocation$ of $joint structure$",
+        "termTemplate": "$fractureMorphology$ $dislocation$ of $jointStructure$",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -30,7 +30,7 @@
   },
   "lexicalTemplates": [
     {
-      "name": "fracture morphology",
+      "name": "fractureMorphology",
       "displayName": "[Fracture morphology]",
       "takeFSNFromSlot": "morph1"
     },
@@ -39,11 +39,12 @@
       "displayName": "[dislocation]",
       "takeFSNFromSlot": "morph2",
       "removeParts": [
-      	"traumatic"
+        "traumatic",
+        "Traumatic"
       ]
     },
     {
-      "name": "joint structure",
+      "name": "jointStructure",
       "displayName": "[joint structure]",
       "takeFSNFromSlot": "jointStructure",
       "removeParts": [
