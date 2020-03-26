@@ -89,7 +89,14 @@
     {
       "name": "organism",
       "displayName": "[organism]",
-      "takeFSNFromSlot": "organism"
+      "takeFSNFromSlot": "organism",
+      "termReplacements": [
+        {
+          "existingTerm": "caused by $organism$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     }
   ]
 }

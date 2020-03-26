@@ -50,6 +50,13 @@
       "name": "bodyStructure",
       "displayName": "[body structure]",
       "takeFSNFromSlot": "bodyStructure",
+      "termReplacements": [
+        {
+          "existingTerm": "of $bodyStructure$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
       "removeParts": [
         "Structure of",
         "structure of",
