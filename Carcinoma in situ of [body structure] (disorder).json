@@ -1,0 +1,56 @@
+{
+  "name": "Carcinoma in situ of [body structure] (disorder)",
+  "domain": "<< 109355002 |Carcinoma in situ (disorder)|",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..*]] {\t\t\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<399919001 |Carcinoma in situ - category (morphologic abnormality)|) @morphology]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @findingSite]],\n\t\t[[~0..1]] 370135005 |Pathological process (attribute)| = [[+id(<308489006 |Pathological process (qualifier value)|) @process]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<410607006 |Organism (organism)|) @agent]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $bodyStructure$ caused by $agent$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $bodyStructure$ caused by $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "agent",
+      "displayName": "[organism]",
+      "takeFSNFromSlot": "agent"
+    },
+    {
+      "name": "morphology",
+      "displayName": "[morphology]",
+      "takeFSNFromSlot": "morphology",
+      "removeParts": [
+        "congenital"
+      ]
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "findingSite",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    }
+  ]
+}

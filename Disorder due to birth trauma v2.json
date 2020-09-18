@@ -1,0 +1,53 @@
+{
+  "name": "Disorder due to birth trauma",
+  "domain": "<< 56110009 |Birth trauma of fetus (disorder)|",
+  "version": 2,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] { \n\t\t[[~1..1]] 246454002 |Occurrence (attribute)| = 450426006 |Fetal or neonatal period (qualifier value)| ,\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<  91723000 |Anatomical structure (body structure)|) @site]],\n\t\t[[~0..1]] 116676008 |Associated morphology (attribute)| = [[+id(<  49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morphology ]],\t\t  \n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[ +id ( << 105590001 |Substance (substance)| OR << 260787004 |Physical object (physical object)|) @causative]] \n\t},\n\t[[~1..1]] { \n\t\t[[~1..1]] 371881003 |During (attribute)| = 236973005 |Delivery procedure (procedure)| \n\t} ,\n\t[[~1..1]] { \n\t\t[[~1..1]] 42752001 |Due to (attribute)| = [[ +id (<<  773760007 |Traumatic event (event)| ) @dueto]] \n\t} \n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $site$ due to birth trauma caused by $causative$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$morphology$ of $site$ due to birth trauma caused by $causative$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "morphology",
+      "displayName": "Morphology",
+      "takeFSNFromSlot": "morphology"
+    },
+    {
+      "name": "site",
+      "displayName": "site",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "causative",
+      "displayName": "agent",
+      "takeFSNFromSlot": "causative"
+    }
+  ]
+}
