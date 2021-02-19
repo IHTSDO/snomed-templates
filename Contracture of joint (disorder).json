@@ -25,16 +25,6 @@
             "900000000000508004": "PREFERRED",
             "900000000000509007": "PREFERRED"
           }
-      },
-      {
-        "type": "SYNONYM",
-        "lang": "en",
-        "termTemplate": "$periodsOfLife$ $process$ $morphology$ of $bodyStructure$ due to $dueTo$",
-        "caseSignificance": "CASE_INSENSITIVE",
-        "acceptabilityMap": {
-          "900000000000508004": "ACCEPTABLE",
-          "900000000000509007": "ACCEPTABLE"
-        }
       }
     ]
   },
