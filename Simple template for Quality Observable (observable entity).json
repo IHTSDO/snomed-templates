@@ -32,47 +32,110 @@
     {
       "name": "property",
       "displayName": "[property]",
-      "takeFSNFromSlot": "property"
+      "takeFSNFromSlot": "property",
+      "termReplacements": [
+        {
+          "existingTerm": "$property$ of",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "component",
       "displayName": "[component]",
-      "takeFSNFromSlot": "component"
+      "takeFSNFromSlot": "component",
+      "termReplacements": [
+        {
+          "existingTerm": " of $component$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "relativeTo",
       "displayName": "[relative to]",
-      "takeFSNFromSlot": "relativeTo"
+      "takeFSNFromSlot": "relativeTo",
+      "termReplacements": [
+        {
+          "existingTerm": " to $relativeTo$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },    
     {
       "name": "inheresIn",
       "displayName": "[inheres in]",
-      "takeFSNFromSlot": "inheresIn"
+      "takeFSNFromSlot": "inheresIn",
+      "termReplacements": [
+        {
+          "existingTerm": " in $inheresIn$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]      
     },   
     {
       "name": "timeAspect",
       "displayName": "[time aspect]",
-      "takeFSNFromSlot": "timeAspect"
+      "takeFSNFromSlot": "timeAspect",
+      "termReplacements": [
+        {
+          "existingTerm": " measured in $timeAspect$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "directSite",
       "displayName": "[direct site]",
-      "takeFSNFromSlot": "directSite"
+      "takeFSNFromSlot": "directSite",
+      "termReplacements": [
+        {
+          "existingTerm": " at $directSite$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "technique",
       "displayName": "[technique]",
-      "takeFSNFromSlot": "technique"
+      "takeFSNFromSlot": "technique",
+      "termReplacements": [
+        {
+          "existingTerm": " by $technique$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "usingDevice",
       "displayName": "[using device]",
-      "takeFSNFromSlot": "usingDevice"
+      "takeFSNFromSlot": "usingDevice",
+      "termReplacements": [
+        {
+          "existingTerm": " using $usingDevice$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },
     {
       "name": "precondition",
       "displayName": "[precondition]",
-      "takeFSNFromSlot": "precondition"
+      "takeFSNFromSlot": "precondition",
+      "termReplacements": [
+        {
+          "existingTerm": " $precondition$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     }
   ]
 }
