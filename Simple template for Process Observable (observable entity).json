@@ -59,7 +59,7 @@
       "takeFSNFromSlot": "processOutput",
       "termReplacements": [
         {
-          "existingTerm": " of $processOutput$",
+          "existingTerm": " $processOutput$",
           "replacement": "",
           "slotAbsent": "true"
         }
