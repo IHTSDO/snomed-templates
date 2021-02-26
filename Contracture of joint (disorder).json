@@ -57,7 +57,14 @@
     {
       "name": "dueTo",
       "displayName": "[dueTo]",
-      "takeFSNFromSlot": "dueTo"
+      "takeFSNFromSlot": "dueTo",
+      "termReplacements": [
+        {
+          "existingTerm": "due to $dueTo$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     }
   ]
 }
