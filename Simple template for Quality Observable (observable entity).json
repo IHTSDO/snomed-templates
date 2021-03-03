@@ -39,6 +39,10 @@
           "replacement": "",
           "slotAbsent": "true"
         }
+      ],
+      "removeParts": [
+        "\\(property\\)",
+        "property"
       ]
     },
     {
@@ -85,7 +89,10 @@
         {
           "existingTerm": " measured in $timeAspect$",
           "replacement": "",
-          "slotAbsent": "true"
+          "slotAbsent": "true",
+          "slotValues":[
+            "123029007"
+          ]
         }
       ]
     },
@@ -98,7 +105,12 @@
           "existingTerm": " at $directSite$",
           "replacement": "",
           "slotAbsent": "true"
+          
         }
+      ],
+      "removeParts": [
+        "specimen",
+        "sample"
       ]
     },
     {
