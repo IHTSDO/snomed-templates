@@ -42,7 +42,14 @@
     {
       "name": "agent",
       "displayName": "[organism]",
-      "takeFSNFromSlot": "agent"
+      "takeFSNFromSlot": "agent",
+      "termReplacements": [
+        {
+          "existingTerm": " caused by $agent$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
     },    
     {
       "name": "findingSite",
