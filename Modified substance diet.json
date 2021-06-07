@@ -1,0 +1,62 @@
+{
+  "name": "Modified substance diet",
+   "domain": "<< 182922004 |Dietary regime (regime/therapy)|",
+  "version": 1,
+  "logicalTemplate": "182922004 |Dietary regime (regime/therapy)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 129445006 |Administration - action (qualifier value)|  OR  129325002 |Introduction - action (qualifier value)|) @method]]\n\t},\n\t[[~1..1]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 366358006 |Finding of nutrient intake (finding)|) @focus]]\n\t},\n\t[[~1..1]] {\n\t\t[[~0..1]] 363701004 |Direct substance (attribute)| = [[+id(<  105590001 |Substance (substance)|) @substance]]\n\t}\n\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$focus$ $substance$ diet (regime/therapy)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$focus$ $substance$ diet",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [     
+    {
+      "name": "focus",
+      "displayName": "[Modified/Increased/Decreased]",
+      "takeFSNFromSlot": "focus",
+      "order": 0,
+      "termReplacements": [
+      	{
+      		"existingTerm": "$focus$ $substance$ diet",
+      		"replacement": "$substance$ modified diet",
+      		"slotAbsent": "true"      		
+      	},
+        {
+      		"existingTerm": "$focus$",
+      		"replacement": "Increased",
+      		"slotTermStartsWith": "Inadequate"   		
+      	},
+        {
+      		"existingTerm": "$focus$",
+      		"replacement": "Decreased",
+      		"slotTermStartsWith": "Excessive"   		
+      	}
+      ]
+    },
+    {
+      "name": "substance",
+      "displayName": "[substance]",
+      "takeFSNFromSlot": "substance",
+      "order": 1
+    }    
+  ]
+}
