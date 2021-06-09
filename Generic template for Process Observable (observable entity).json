@@ -1,0 +1,150 @@
+{
+  "name": "Generic template for Process Observable (observable entity)",
+  "domain":"< 363787002 |Observable entity (observable entity)|",
+  "version": 1,
+  "logicalTemplate":"363787002 |Observable entity (observable entity)|:\n\t[[~0..*]] {\n\t\t[[~0..*]]  246501002 |Technique (attribute)|  = [[+id (<<  272394005 |Technique (qualifier value)|  OR <<  273249006 |Assessment scales (assessment scale)| ) @technique]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]]  246514001 |Units (attribute)|  = [[+id (<  767524001 |Unit of measure (qualifier value)| ) @units]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]]  370130000 |Property (attribute)|  = [[+id(<<  118598001 |Property (qualifier value)| ) @property]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]]  370132008 |Scale type (attribute)|  = [[+id (<<  117362005 |Nominal value (qualifier value)|  OR <<  117363000 |Ordinal value (qualifier value)|  OR <<  117364006 |Narrative value (qualifier value)|  OR <<  117365007 |Ordinal OR quantitative value (qualifier value)|  OR <<  117444000 |Text value (qualifier value)|  OR <<  26716007 |Qualitative (qualifier value)|  OR <<  30766002 |Quantitative (qualifier value)| ) @scaleType]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  424226004 |Using device (attribute)|  = [[+id (<<  49062001 |Device (physical object)| ) @usingDevice]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704319004 |Inheres in (attribute)|  = [[+id (<<  105590001 |Substance (substance)|  OR <<  123037004 |Body structure (body structure)|  OR <<  123038009 |Specimen (specimen)|  OR <<  260787004 |Physical object (physical object)|  OR <<  373873005 |Pharmaceutical / biologic product (product)|  OR <<  410607006 |Organism (organism)|  OR <<  419891008 |Record artifact (record artifact)|  OR <<  125676002 |Person (person)| ) @inheresIn]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704321009 |Characterizes (attribute)|  = [[+id (<<  71388002 |Procedure (procedure)|  OR <<  719982003 |Process (qualifier value)| ) @characterizes]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704322002 |Process agent (attribute)|  = [[+id (<<  105590001 |Substance (substance)|  OR <<  123037004 |Body structure (body structure)|  OR <<  260787004 |Physical object (physical object)|  OR <<  373873005 |Pharmaceutical / biologic product (product)|  OR <<  410607006 |Organism (organism)| ) @processAgent]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]]   704323007 |Process duration (attribute)|  = [[+id (<<  7389001 |Time frame (qualifier value)| ) @processDuration]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704324001 |Process output (attribute)|  = [[ +id (<<  105590001 |Substance (substance)|  OR <<  719982003 |Process (qualifier value)| ) @processOutput]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704326004 |Precondition (attribute)|  = [[+id (<<  404684003 |Clinical finding (finding)|  OR <<  703763000 |Precondition value (qualifier value)|  OR <<  71388002 |Procedure (procedure)| ) @precondition]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  704327008 |Direct site (attribute)|  = [[+id(<<  105590001 |Substance (substance)|  OR <<  123037004 |Body structure (body structure)|  OR <<  123038009 |Specimen (specimen)|  OR <<  260787004 |Physical object (physical object)|  OR <<  373873005 |Pharmaceutical / biologic product (product)|  OR <<  410607006 |Organism (organism)|  OR <<  419891008 |Record artifact (record artifact)| ) @directSite]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..*]]  718497002 |Inherent location (attribute)|  = [[+id (<<  105590001 |Substance (substance)|  OR <<  123037004 |Body structure (body structure)|  OR <<  123038009 |Specimen (specimen)|  OR <<  260787004 |Physical object (physical object)|  OR <<  373873005 |Pharmaceutical / biologic product (product)|  OR <<  410607006 |Organism (organism)|  OR <<  419891008 |Record artifact (record artifact)| ) @inherentLocation]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$property$ of $characterizes$ of $processOutput$ in $processDuration$ in $inheresIn$ measured at $directSite$ by $technique$ using $usingDevice$ $precondition$ (observable entity)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$property$ of $characterizes$ of $processOutput$ in $processDuration$ in $inheresIn$ measured at $directSite$ by $technique$ using $usingDevice$ $precondition$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "property",
+      "displayName": "[property]",
+      "takeFSNFromSlot": "property",
+      "termReplacements": [
+        {
+          "existingTerm": "$property$ of",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
+      "removeParts": [
+        "\\(property\\)",
+        "property"        
+      ]
+    },
+    {
+      "name": "characterizes",
+      "displayName": "[characterizes]",
+      "takeFSNFromSlot": "characterizes",
+      "termReplacements": [
+        {
+          "existingTerm": " of $characterizes$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },
+    {
+      "name": "processOutput",
+      "displayName": "[process output]",
+      "takeFSNFromSlot": "processOutput",
+      "termReplacements": [
+        {
+          "existingTerm": " $processOutput$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },    
+    {
+      "name": "processDuration",
+      "displayName": "[process duration]",
+      "takeFSNFromSlot": "processDuration",
+      "termReplacements": [
+        {
+          "existingTerm": " in $processDuration$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },   
+    {
+      "name": "inheresIn",
+      "displayName": "[inheres in]",
+      "takeFSNFromSlot": "inheresIn",
+      "termReplacements": [
+        {
+          "existingTerm": " in $inheresIn$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+      
+    },
+    {
+      "name": "directSite",
+      "displayName": "[direct site]",
+      "takeFSNFromSlot": "directSite",
+      "termReplacements": [
+        {        
+          "existingTerm": " measured at $directSite$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
+      "removeParts": [
+        "specimen",
+        "sample"
+      ]      
+    },
+    {
+      "name": "technique",
+      "displayName": "[technique]",
+      "takeFSNFromSlot": "technique",
+      "termReplacements": [
+        {
+          "existingTerm": " by $technique$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]      
+    },
+    {
+      "name": "usingDevice",
+      "displayName": "[using device]",
+      "takeFSNFromSlot": "usingDevice",
+      "termReplacements": [
+        {
+          "existingTerm": " using $usingDevice$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },
+    {
+      "name": "precondition",
+      "displayName": "[precondition]",
+      "takeFSNFromSlot": "precondition",
+      "termReplacements": [
+        {
+          "existingTerm": " $precondition$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    }
+  ]
+}

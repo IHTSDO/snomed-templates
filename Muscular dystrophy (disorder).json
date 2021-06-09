@@ -1,0 +1,38 @@
+{
+  "name": "Muscular dystrophy (disorder)",
+  "domain": "<<  73297009 |Muscular dystrophy (disorder)| ",
+  "version": 1,
+  "logicalTemplate": "782964007 |Genetic disease (disorder)|:\n  [[~1..*]] {\n    [[~1..1]] 116676008 |Associated morphology (attribute)| = [[ +id (<< 4720007 |Dystrophy (morphologic abnormality)|) @morphology]],\n    [[~1..1]] 363698007 |Finding site (attribute)| = [[ +id (<< 870435006 |Structure of striated muscle (body structure)|) @bodyStructure]],\n    [[~0..1]] 246454002 |Occurrence (attribute)| = [[ +id (< 282032007 |Periods of life (qualifier value)|) @periodsOfLife]],\n    [[~1..1]] 370135005 |Pathological process (attribute)| = 308490002 |Pathological developmental process (qualifier value)|\n  },\n  [[~1..1]] {\n    [[~1..1]] 263502005 |Clinical course (attribute)| = 255314001 |Progressive (qualifier value)|\n  }\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$periodsOfLife$ progressive muscular dystrophy (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$periodsOfLife$ progressive muscular dystrophy",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "periodsOfLife",
+      "displayName": "[Periods of life]",
+      "takeFSNFromSlot": "periodsOfLife"
+    }
+  ]
+}
