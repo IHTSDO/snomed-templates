@@ -1,0 +1,50 @@
+{
+  "name": "Intoxication caused by [substance product] (disorder)",
+  "domain": "<< 1149322001 |Intoxication (disorder)|",
+  "version": 1,
+  "logicalTemplate": "1149322001 |Intoxication (disorder)|:\n    [[~0..1]] {\n        [[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<< 105590001 |Substance (substance)| OR << 373873005 |Pharmaceutical / biologic product (product)|) @agent]],\n        [[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<< 12738006 |Brain structure (body structure)|) @findingSite]]\n    },\n    [[~0..1]] {\n        [[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(< 288524001 |Courses (qualifier value)|) @clinicalCourse]]\n    }\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Intoxication caused by $agent$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Intoxication caused by $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$agent$ intoxication",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "agent",
+      "displayName": "[agent]",
+      "takeFSNFromSlot": "agent",
+      "removeParts": [
+      ]
+    }
+  ]
+}
