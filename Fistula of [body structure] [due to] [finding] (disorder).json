@@ -54,7 +54,7 @@
     },
     {
       "name": "dueTofindingOrProcedure",
-      "displayName": " [finding/procedure]",
+      "displayName": "[finding/procedure]",
       "takeFSNFromSlot": "dueto",
       "removeParts": [
       ]

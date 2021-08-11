@@ -31,12 +31,12 @@
   "lexicalTemplates": [
     {
       "name": "morphology",
-      "displayName": "morphology",
+      "displayName": "[morphology]",
       "takeFSNFromSlot": "morphology"
     },
     {
       "name": "site",
-      "displayName": "body structure",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "site",
       "removeParts": [
         "Structure of",
@@ -46,17 +46,17 @@
     },
     {
       "name": "causative",
-      "displayName": "causative",
+      "displayName": "[causative]",
       "takeFSNFromSlot": "causative"
     },
     {
       "name": "course",
-      "displayName": "course",
+      "displayName": "[course]",
       "takeFSNFromSlot": "course"
     },
     {
       "name": "occurrence",
-      "displayName": "periods of life",
+      "displayName": "[periods of life]",
       "takeFSNFromSlot": "occurrence"
     }    
   ]

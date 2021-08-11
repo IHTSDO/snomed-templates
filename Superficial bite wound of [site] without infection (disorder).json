@@ -33,7 +33,7 @@
       "name": "bite event",
       "displayName": "[Bite event]",
       "takeFSNFromSlot": "biteEvent",
-	  "termReplacements": [
+	    "termReplacements": [
       	{
       		"existingTerm": "$bite event$",
       		"replacement": "Nonvenomous insect bite",      		

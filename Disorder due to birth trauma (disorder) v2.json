@@ -31,12 +31,12 @@
   "lexicalTemplates": [
     {
       "name": "morphology",
-      "displayName": "Morphology",
+      "displayName": "[Morphology]",
       "takeFSNFromSlot": "morphology"
     },
     {
       "name": "site",
-      "displayName": "site",
+      "displayName": "[site]",
       "takeFSNFromSlot": "site",
       "removeParts": [
         "Structure of",
@@ -46,7 +46,7 @@
     },
     {
       "name": "causative",
-      "displayName": "agent",
+      "displayName": "[agent]",
       "takeFSNFromSlot": "causative"
     }
   ]

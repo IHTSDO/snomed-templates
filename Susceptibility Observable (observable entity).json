@@ -31,27 +31,27 @@
   "lexicalTemplates": [
     {
       "name": "scaleType",
-      "displayName": "scale type",
+      "displayName": "[scale type]",
       "takeFSNFromSlot": "scaleType"
     },
     {
       "name": "property",
-      "displayName": "property",
+      "displayName": "[property]",
       "takeFSNFromSlot": "property"
     },
     {
       "name": "inheresIn",
-      "displayName": "inheres in",
+      "displayName": "[inheres in]",
       "takeFSNFromSlot": "inheresIn"
     },
     {
       "name": "towards",
-      "displayName": "towards",
+      "displayName": "[towards]",
       "takeFSNFromSlot": "towards"
     },
     {
       "name": "location",
-      "displayName": "inherent location",
+      "displayName": "[inherent location]",
       "takeFSNFromSlot": "location",
       "removeParts": [
         "Structure of",
@@ -61,7 +61,7 @@
     },
     {
       "name": "technique",
-      "displayName": "technique",
+      "displayName": "[technique]",
       "takeFSNFromSlot": "technique"
     }        
   ]

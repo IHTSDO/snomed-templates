@@ -41,7 +41,7 @@
   "lexicalTemplates": [
     {
       "name": "procSite",
-      "displayName": "body structure",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",
@@ -50,12 +50,12 @@
     },
     {
       "name": "contrast",
-      "displayName": "contrast",
+      "displayName": "[contrast]",
       "takeFSNFromSlot": "contrast"
     },
     {
       "name": "focus",
-      "displayName": "focus",
+      "displayName": "[focus]",
       "takeFSNFromSlot": "focus"
     }
   ]

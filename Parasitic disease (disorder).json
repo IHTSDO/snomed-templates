@@ -44,7 +44,7 @@
       "name": "morphology",
       "displayName": "[Morphology]",
       "takeFSNFromSlot": "associatedMorphology",
-	  "termReplacements": [
+	    "termReplacements": [
       	{
       		"existingTerm": "$morphology$",
       		"replacement": "infection",

@@ -40,7 +40,7 @@
   "lexicalTemplates": [
     {
       "name": "procSiteTerm",
-      "displayName": "X",
+      "displayName": "[X]",
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",
@@ -50,7 +50,7 @@
     },
     {
       "name": "actionTerm",
-      "displayName": "Procedure",
+      "displayName": "[Procedure]",
       "takeFSNFromSlot": "action",
       "removeParts": [
         " - action"
