@@ -31,7 +31,7 @@
   "lexicalTemplates": [    
     {
       "name": "site",
-      "displayName": "[X body structure]",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "site",
       "removeParts": [
         "Structure of",

@@ -41,7 +41,7 @@
   "lexicalTemplates": [
     {
       "name": "procSite",
-      "displayName": "[X]",
+      "displayName": "[body structure]",
       "takeFSNFromSlot": "procSite",
       "removeParts": [
         "structure of",
