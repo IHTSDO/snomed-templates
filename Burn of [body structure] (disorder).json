@@ -1,5 +1,5 @@
 {
-  "name": "Burn of [body structure] (disorder)",
+  "name": "Burn of [body structure] (disorder) - v1.0",
   "domain": "<<125666000 |Burn (disorder)|",
   "version": 1,
   "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..*]] {\n\t\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<<123037004 |Body structure (body structure)|) @site]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = 48333001 |Burn injury (morphologic abnormality)|\n\t}\n",

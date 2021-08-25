@@ -1,5 +1,5 @@
 {
-  "name": "Fracture dislocation of [body structure] (disorder)",
+  "name": "Fracture dislocation of [body structure] (disorder) - v1.0",
   "domain":"<<263063009 |Fracture dislocation of joint (disorder)|",
   "version": 1,
   "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..*]] { 116676008 |Associated morphology (attribute)| = [[ +id( <<72704001 |Fracture (morphologic abnormality)| ) @morph1]], 363698007 |Finding site (attribute)| = [[ +id( <<272673000 |Bone structure (body structure)| ) @boneStructure]]} , [[~1..*]] { 116676008 |Associated morphology (attribute)| = [[ +id( <<87642003 |Dislocation (morphologic abnormality)| ) @morph2]], 363698007 |Finding site (attribute)| = [[ +id( <<39352004 |Joint structure (body structure)| ) @jointStructure ]]} , [[~1..1]] {42752001 |Due to (attribute)| = [[ +id( <<773760007 |Traumatic event (event)| ) @due]] }",

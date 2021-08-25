@@ -1,5 +1,5 @@
 {
-  "name": "MRI of [body structure] (procedure)",
+  "name": "MRI of [body structure] (procedure) - v1.0",
   "domain": "<113091000 |Magnetic resonance imaging (procedure)|",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312250003 |Magnetic resonance imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id( <<442083009 |Anatomical or acquired body structure (body structure)|) @procSite]]}\n",

@@ -1,5 +1,5 @@
 {
-  "name": "MRI of [body structure] (procedure) v2",
+  "name": "MRI of [body structure] (procedure) - v2.0",
   "domain": "<< 113091000 |Magnetic resonance imaging (procedure)|  MINUS (<<  258177008 |Magnetic resonance imaging guidance (procedure)|  OR <<  90084008 |Magnetic resonance imaging without contrast (procedure)|  OR <<  241671007 |Magnetic resonance spectroscopy (procedure)| )",
   "version": 2,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = 312250003 |Magnetic resonance imaging - action (qualifier value)|,\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id( <<  442083009 |Anatomical or acquired body structure (body structure)|) @procSite]],\n\t\t[[~0..1]] 424361007 |Using substance (attribute)| = [[+id( <<  385420005 |Contrast media (substance)|) @contrast]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id( <<  404684003 |Clinical finding (finding)|  OR <<  71388002 |Procedure (procedure)|) @focus]]\n\t}\n",

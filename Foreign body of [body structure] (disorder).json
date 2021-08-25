@@ -1,5 +1,5 @@
 {
-  "name": "Foreign body of [body structure] (disorder)",
+  "name": "Foreign body of [body structure] (disorder) - v1.0",
   "domain":"<<125670008 |Foreign body (disorder)|",
   "version": 1,
   "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..1]] { [[~0..1]]  363698007 |Finding site (attribute)|  = [[ +id( <  123037004 |Body structure (body structure)| ) @site]] , [[~1..1]]  116676008 |Associated morphology (attribute)|  = [[ +id( <<  19227008 |Foreign body (morphologic abnormality)|  ) @morph]]}",

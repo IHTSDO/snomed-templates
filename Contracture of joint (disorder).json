@@ -1,5 +1,5 @@
 {
-  "name": "Contracture of joint (disorder)",
+  "name": "Contracture of joint (disorder) - v1.0",
   "domain": "<<  7890003 |Contracture of joint (disorder)|",
   "version": 1,
   "logicalTemplate": "64572001 |Disease (disorder)| + 298325004 |Finding of movement (finding)|:\n  [[~1..2]] {\n    [[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<  57048009 |Contracture (morphologic abnormality)|) @morphology]],\n    [[~1..1]] 363698007 |Finding site (attribute)| = [[+id((<< 785818007 |Structure of joint region (body structure)|  MINUS << 39352004 |Joint structure (body structure)|)) @bodyStructure]],\n    [[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(< 282032007 |Periods of life (qualifier value)|) @periodsOfLife]],\n    [[~0..1]] 370135005 |Pathological process (attribute)| = [[+id(<  308489006 |Pathological process (qualifier value)|) @process]]\n  },\n  [[~1..1]] {\n    [[~1..1]] 363714003 |Interprets (attribute)| = [[+id(<<  364564000 |Range of joint movement (observable entity)|) @interprets]],\n    [[~1..1]] 363713009 |Has interpretation (attribute)| = 1250004 |Decreased (qualifier value)|\n  },\n  [[~0..*]] {\n    [[~0..1]] 42752001 |Due to (attribute)| = [[+id(<  64572001 |Disease (disorder)|) @dueTo]]\n  }\n",

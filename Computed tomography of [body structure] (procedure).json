@@ -1,5 +1,5 @@
 {
-  "name": "CT of [body structure] (procedure)",
+  "name": "Computed tomography of [body structure] (procedure) - v1.0",
   "domain": "<<77477000 |Computerized axial tomography (procedure)|",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging action (qualifier value)|,\n\t\t[[~1..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(<< 442083009 |Anatomical or acquired body structure (body structure)|) @procSite]]\n\t}\n",

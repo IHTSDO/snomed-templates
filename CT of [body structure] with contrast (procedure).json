@@ -1,5 +1,5 @@
 {
-  "name": "CT of [body structure] with contrast (procedure)",
+  "name": "CT of [body structure] with contrast (procedure) - v1.0",
   "domain": "<<77477000 |Computerized axial tomography (procedure)|:{ 424361007 |Using substance (attribute)|= <<385420005 |Contrast media (substance)|}",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t260686004 |Method (attribute)| = 312251004 |Computed tomography imaging - action (qualifier value)|,\n\t\t405813007 |Procedure site - Direct (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @procSite]],\n\t\t424361007 |Using substance (attribute)| = [[+id(<<385420005 |Contrast media (substance)|) @substance]]\n\t}\n",

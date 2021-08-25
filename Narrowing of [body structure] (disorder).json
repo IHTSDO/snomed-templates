@@ -1,5 +1,5 @@
 {
-  "name": "Narrowing of [body structure] (disorder)",
+  "name": "Narrowing of [body structure] (disorder) - v1.0",
   "domain": "<<  64572001 |Disease (disorder)|  :  116676008 |Associated morphology (attribute)|  = <<  708528005 |Narrowing (morphologic abnormality)|",
   "version": 1,
   "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..1]] { \n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 708528005 |Narrowing (morphologic abnormality)|  ) @morphology]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(< 442083009 |Anatomical or acquired body structure (body structure)|) @site]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(< 282032007 |Periods of life (qualifier value)|) @occurrence]],\t\t\n\t\t[[~0..1]] 370135005 |Pathological process (attribute)| = [[+id(< 308489006 |Pathological process (qualifier value)|) @pathological]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[ +id ( < 410607006 |Organism (organism)| OR < 105590001 |Substance (substance)| OR < 78621006 |Physical force (physical force)|) @causative]] \n\t},\n\t[[~1..1]] { \n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[ +id ( < 288524001 |Courses (qualifier value)|) @course]] \n\t} \n",

@@ -1,5 +1,5 @@
 {
-  "name": "CT guided [procedure] of [body structure] (procedure)",
+  "name": "CT guided [procedure] of [body structure] (procedure) - v1.0",
   "domain": "<258176004 |Computerized tomography guidance (procedure)| ",
   "version": 1,
   "logicalTemplate": "71388002 |Procedure (procedure)|:   [[~1..1]] {      260686004 |Method (attribute)| = 312251004 |Computed tomography imaging action (qualifier value)|,      [[~1..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(<< 442083009 |Anatomical or acquired body structure (body structure)|) @procSite]],      363703001 |Has intent (attribute)| = 429892002 |Guidance intent (qualifier value)|   },   {      260686004 |Method (attribute)| = [[+id (<< 129264002 |Action (qualifier value)|) @action]],      [[~1..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(<< 442083009 |Anatomical or acquired body structure (body structure)|) @procSite1]]   }",
