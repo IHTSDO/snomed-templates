@@ -1,8 +1,8 @@
 {
   "name": "Infection of [body structure] caused by [bacteria] (disorder) - OUTDATED",
-  "domain": "<<301811001 |Bacterial infection by site (disorder)|",
+  "domain": "<< 301811001 |Bacterial infection by site (disorder)|",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t{\n\t\t370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t363698007 |Finding site (attribute)| = [[+id(<<442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]],\n\t\t246075003 |Causative agent (attribute)| = [[+id(<<409822003 |Superkingdom Bacteria (organism)|) @bacteria]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t{\n\t\t370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t363698007 |Finding site (attribute)| = [[+id(<< 442083009 |Anatomical or acquired body structure (body structure)|) @findingSite]],\n\t\t246075003 |Causative agent (attribute)| = [[+id(<< 409822003 |Superkingdom Bacteria (organism)|) @bacteria]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

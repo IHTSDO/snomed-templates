@@ -2,7 +2,7 @@
   "name": "Shunt (physical object) - v1.0",
   "domain": "<< 257351008 |Shunt (physical object)|",
   "version": 1,
-  "logicalTemplate": "257351008 |Shunt (physical object)|:\n\t[[~0..1]] 836358009 |Has device intended site (attribute)| = [[+id(<  123037004 |Body structure (body structure)|) @site]],\n\t[[~0..*]] 840562008 |Has device characteristic (attribute)| = [[+id(<  362981000 |Qualifier value (qualifier value)|) @characteristic]],\n\t[[~0..*]] 840560000 |Has compositional material (attribute)| = [[+id(<  105590001 |Substance (substance)|) @material]]\n",
+  "logicalTemplate": "257351008 |Shunt (physical object)|:\n\t[[~0..1]] 836358009 |Has device intended site (attribute)| = [[+id(< 123037004 |Body structure (body structure)|) @site]],\n\t[[~0..*]] 840562008 |Has device characteristic (attribute)| = [[+id(< 362981000 |Qualifier value (qualifier value)|) @characteristic]],\n\t[[~0..*]] 840560000 |Has compositional material (attribute)| = [[+id(< 105590001 |Substance (substance)|) @material]]\n",
   "conceptOutline": {
     "definitionStatus": "PRIMITIVE",
     "descriptions": [

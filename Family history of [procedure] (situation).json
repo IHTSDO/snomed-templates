@@ -1,8 +1,8 @@
 {
   "name": "Family history of [procedure] (situation) - v1.0",
-  "domain": "<297249002 |Family history of procedure (situation)|",
+  "domain": "< 297249002 |Family history of procedure (situation)|",
   "version": 1,
-  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t363589002 |Associated procedure (attribute)| = [[+id(<71388002 |Procedure (procedure)|) @procedure]],\n\t\t408731000 |Temporal context (attribute)| = 410511007 |Current or past (actual) (qualifier value)|,\n\t\t408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 444148008 |Person in family of subject (person)|\n\t}\n",
+  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t{\n\t\t363589002 |Associated procedure (attribute)| = [[+id(< 71388002 |Procedure (procedure)|) @procedure]],\n\t\t408731000 |Temporal context (attribute)| = 410511007 |Current or past (actual) (qualifier value)|,\n\t\t408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t408732007 |Subject relationship context (attribute)| = 444148008 |Person in family of subject (person)|\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

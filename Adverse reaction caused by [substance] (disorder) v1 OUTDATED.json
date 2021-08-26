@@ -1,8 +1,8 @@
 {
   "name": "Adverse reaction caused by [substance] (disorder) OUTDATED",
-  "domain":"<<282100009 |Adverse reaction caused by substance (disorder)|",
+  "domain":"<< 282100009 |Adverse reaction caused by substance (disorder)|",
   "version": 1,
-  "logicalTemplate": "281647001 |Adverse reaction (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
+  "logicalTemplate": "281647001 |Adverse reaction (disorder)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

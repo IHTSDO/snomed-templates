@@ -1,8 +1,8 @@
 {
   "name": "Nonallergic hypersensitivity to [substance] (finding) - v2.0",
-  "domain": "<609397002 |Pseudoallergy to substance (finding)|",
+  "domain": "< 609397002 |Pseudoallergy to substance (finding)|",
   "version": 2,
-  "logicalTemplate":"420134006 |Propensity to adverse reactions (finding)|:\n[[~1..1]]\t{\n\t[[~1..1]] 719722006 |Has realization (attribute)| = 609404002 |Non-allergic hypersensitivity process (qualifier value)|,\n\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]\n\t}\n",
+  "logicalTemplate":"420134006 |Propensity to adverse reactions (finding)|:\n[[~1..1]]\t{\n\t[[~1..1]] 719722006 |Has realization (attribute)| = 609404002 |Non-allergic hypersensitivity process (qualifier value)|,\n\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

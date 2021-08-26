@@ -2,7 +2,7 @@
   "name": "Superficial bite wound of [site] without infection (disorder) - v1.0",
   "domain": "<< 283682007 |Bite - wound (disorder)|",
   "version": 1,
-  "logicalTemplate": "25358000 |Superficial injury without infection (disorder)|:\t\n\t\t[[~1..1]] {\n\t\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<37205004 |Superficial wound (morphologic abnormality)|) @associatedMorphology]],\n\t\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<91723000 |Anatomical structure (body structure)|) @site]]\n\t\t},\n\t\t{\n\t\t\t[[~1..1]] 42752001 |Due to (attribute)| = [[+id(<<782161000 |Bite (event)|) @biteEvent]]\n\t\t}\n",
+  "logicalTemplate": "25358000 |Superficial injury without infection (disorder)|:\t\n\t\t[[~1..1]] {\n\t\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 37205004 |Superficial wound (morphologic abnormality)|) @associatedMorphology]],\n\t\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @site]]\n\t\t},\n\t\t{\n\t\t\t[[~1..1]] 42752001 |Due to (attribute)| = [[+id(<< 782161000 |Bite (event)|) @biteEvent]]\n\t\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

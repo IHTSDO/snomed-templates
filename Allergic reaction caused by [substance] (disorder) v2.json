@@ -1,8 +1,8 @@
 {
   "name": "Allergic reaction caused by [substance] (disorder) - v2.0",
-  "domain": "<<418634005 |Allergic reaction caused by substance (disorder)|",
+  "domain": "<< 418634005 |Allergic reaction caused by substance (disorder)|",
   "version": 2,
-  "logicalTemplate": "281647001 |Adverse reaction (disorder)|:\n [[~1..1]] { \n\t[[~1..1]] 370135005 |Pathological process (attribute)| = 472964009 |Allergic process (qualifier value)|,\n\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(<105590001 |Substance (substance)|) @substance]]}\n\n",
+  "logicalTemplate": "281647001 |Adverse reaction (disorder)|:\n [[~1..1]] { \n\t[[~1..1]] 370135005 |Pathological process (attribute)| = 472964009 |Allergic process (qualifier value)|,\n\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]}\n\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

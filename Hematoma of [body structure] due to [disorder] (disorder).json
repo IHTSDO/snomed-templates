@@ -1,8 +1,8 @@
 {
   "name": "Hematoma of [body structure] due to [disorder] (disorder) - v1.0",
-  "domain": "<<385494008 |Hematoma (disorder)|",
+  "domain": "<< 385494008 |Hematoma (disorder)|",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)| : {[[~0..1]] 246454002 |Occurrence (attribute)| =[[+id(<282032007 |Periods of life (qualifier value)| ) @occurrence]], [[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<123037004 |Body structure (body structure)|) @site]], [[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<<35566002 |Hematoma (morphologic abnormality)| ) @morphology ]]}, {[[~0..1]] 42752001 |Due to (attribute)|  = [[+id(<64572001 |Disease (disorder)| ) @dueto ]]}",
+  "logicalTemplate": "64572001 |Disease (disorder)| : {[[~0..1]] 246454002 |Occurrence (attribute)| =[[+id(< 282032007 |Periods of life (qualifier value)| ) @occurrence]], [[~0..1]] 363698007 |Finding site (attribute)| = [[+id(< 123037004 |Body structure (body structure)|) @site]], [[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 35566002 |Hematoma (morphologic abnormality)| ) @morphology ]]}, {[[~0..1]] 42752001 |Due to (attribute)|  = [[+id(< 64572001 |Disease (disorder)| ) @dueto ]]}",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [

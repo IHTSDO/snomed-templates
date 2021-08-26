@@ -1,8 +1,8 @@
 {
   "name": "Traumatic dislocation of [joint structure] (disorder) - v1.0",
-  "domain":"<<129156001 |Traumatic dislocation of joint (disorder)|",
+  "domain":"<< 129156001 |Traumatic dislocation of joint (disorder)|",
   "version": 1,
-  "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..*]] { [[~1..*]] 363698007 |Finding site (attribute)| = [[ +id( <<39352004 |Joint structure (body structure)| ) @site ]] , [[~1..*]] 116676008 |Associated morphology (attribute)| = [[ +id( <<87642003 |Dislocation (morphologic abnormality)| ) @morph]]} , [[~1..1]] {42752001 |Due to (attribute)| = [[ +id( <<773760007 |Traumatic event (event)| ) @due]] }",
+  "logicalTemplate":"64572001 |Disease (disorder)| : [[~1..*]] { [[~1..*]] 363698007 |Finding site (attribute)| = [[+id(<<39352004 |Joint structure (body structure)|) @site]] , [[~1..*]] 116676008 |Associated morphology (attribute)| = [[+id(<< 87642003 |Dislocation (morphologic abnormality)|) @morph]]} , [[~1..1]] {42752001 |Due to (attribute)| = [[+id(<< 773760007 |Traumatic event (event)|) @due]] }",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
