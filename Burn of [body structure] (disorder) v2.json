@@ -1,0 +1,54 @@
+{
+  "name": "Burn of [body structure] (disorder) - v2.0",
+  "domain": "<< 125666000 |Burn (disorder)|",
+  "version": 2,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n\t[[~1..*]] {\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(<< 123037004 |Body structure (body structure)|) @site]],\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 48333001 |Burn injury (morphologic abnormality)|) @morphology]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(<< 105590001 |Substance (substance)| OR << 260787004 |Physical object (physical object)| OR << 78621006 |Physical force (physical force)|) @agent]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 42752001 |Due to (attribute)| = [[+id(<< 773760007 |Traumatic event (event)|) @dueTo]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Burn of $body structure$ caused by $agent$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Burn of $body structure$ caused by $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "body structure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "structure of",
+      	"structure"
+      ]
+    },
+    {
+      "name": "agent",
+      "displayName": "[agent]",
+      "takeFSNFromSlot": "agent",
+      "termReplacements": [
+        {
+          "existingTerm": " caused by $agent$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    }
+  ]
+}
