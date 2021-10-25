@@ -1,8 +1,8 @@
 {
-  "name": "Modified substance diet (regime/therapy) - v1.0",
+  "name": "Modified substance diet (regime/therapy) - v2.0",
    "domain": "<< 182922004 |Dietary regime (regime/therapy)|",
-  "version": 1,
-  "logicalTemplate": "182922004 |Dietary regime (regime/therapy)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 129445006 |Administration - action (qualifier value)| OR 129325002 |Introduction - action (qualifier value)|) @method]]\n\t},\n\t[[~1..1]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 366358006 |Finding of nutrient intake (finding)|) @focus]]\n\t},\n\t[[~1..1]] {\n\t\t[[~0..1]] 363701004 |Direct substance (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]\n\t}\n\n",
+  "version": 2,
+  "logicalTemplate": "182922004 |Dietary regime (regime/therapy)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 129445006 |Administration - action (qualifier value)| OR 129325002 |Introduction - action (qualifier value)|) @method]],\n\t\t[[~0..1]] 363701004 |Direct substance (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 366358006 |Finding of nutrient intake (finding)|) @focus]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
