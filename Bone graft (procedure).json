@@ -1,0 +1,53 @@
+{
+  "name": "Bone graft (procedure) - v1.0",
+  "domain": "<< 80983001 |Bone graft (procedure)|",
+  "version": 1,
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = 129407005 |Grafting - action (qualifier value)|,\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(<< 272673000 |Bone structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 363701004 |Direct substance (attribute)| = [[+id(<< 261230003 |Bone graft material (substance)|) @directSubstance]]\t\t\n\t},\n\t[[~0..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 129377008 |Reconstruction - action (qualifier value)|) @method]],\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(<< 272673000 |Bone structure (body structure)|) @procedureSite]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Grafting of $bodyStructure$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Grafting of $bodyStructure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Bone graft of $bodyStructure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+      	"structure"
+      ]
+    }
+  ]
+}
