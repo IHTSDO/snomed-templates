@@ -9,7 +9,7 @@
       {
         "type": "FSN",
         "lang": "en",
-        "termTemplate": "$dueTo$ $course$ $agent$ overdose (disorder)",
+        "termTemplate": "$dueTo$ $course$ $causative$ overdose (disorder)",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
@@ -19,21 +19,11 @@
       {
         "type": "SYNONYM",
         "lang": "en",
-        "termTemplate": "$dueTo$ $course$ $agent$ overdose",
+        "termTemplate": "$dueTo$ $course$ $causative$ overdose",
         "caseSignificance": "CASE_INSENSITIVE",
         "acceptabilityMap": {
           "900000000000508004": "PREFERRED",
           "900000000000509007": "PREFERRED"
-        }
-      },
-      {
-        "type": "SYNONYM",
-        "lang": "en",
-        "termTemplate": "$agent$ adverse reaction",
-        "caseSignificance": "CASE_INSENSITIVE",
-        "acceptabilityMap": {
-          "900000000000508004": "ACCEPTABLE",
-          "900000000000509007": "ACCEPTABLE"
         }
       }
     ]
@@ -50,7 +40,7 @@
       "takeFSNFromSlot": "course"
     },
     {
-      "name": "agent",
+      "name": "causative",
       "displayName": "[substance or product]",
       "takeFSNFromSlot": "causative"
     }
