@@ -2,7 +2,7 @@
   "name": "Fracture of [bone structure] (disorder) - v2.0",
   "domain": "<< 125605004 |Fracture of bone (disorder)|",
   "version": 1,
-  "logicalTemplate": "64572001 |Disease (disorder)|:\n[[~1..*]]\t{\n\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 72704001 |Fracture (morphologic abnormality)|) @fractureMorphology]],\n\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<< 272673000 |Bone structure (body structure)|) @boneStructure]],\n\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<< 282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t}\n",
+  "logicalTemplate": "64572001 |Disease (disorder)|:\n[[~1..*]]\t{\n\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 72704001 |Fracture (morphologic abnormality)|) @fractureMorphology]],\n\t[[~1..1]] 363698007 |Finding site (attribute)| = [[+id(<< 272673000 |Bone structure (body structure)|) @boneStructure]],\n\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(<< 282032007 |Periods of life (qualifier value)|) @periodsOfLife]]\n\t},\n[[~0..1]]\t{\n\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id(<< 773760007 |Traumatic event (event)|) @dueTo]]\n\t}\n",
   "conceptOutline": {
     "definitionStatus": "FULLY_DEFINED",
     "descriptions": [
@@ -28,17 +28,17 @@
       }
     ]
   },
-  "lexicalTemplates": [
+  "lexicalTemplates": [ 
     {
       "name": "fractureMorphology",
-      "displayName": "[fractureMorphology]",
+      "displayName": "[Fracture morphology]",
       "takeFSNFromSlot": "fractureMorphology",
       "removeParts": [
       ]
     },
     {
       "name": "boneStructure",
-      "displayName": "[boneStructure]",
+      "displayName": "[bone structure]",
       "takeFSNFromSlot": "boneStructure",
       "removeParts": [
         "Structure of",
@@ -48,7 +48,7 @@
     },
     {
       "name": "periodsOfLife",
-      "displayName": "[periodsOfLife]",
+      "displayName": "[Periods of life]",
       "takeFSNFromSlot": "periodsOfLife" 
     }
   ]
