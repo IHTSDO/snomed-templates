@@ -1,0 +1,63 @@
+{
+  "name": "Excision of [cyst] of [body structure] (procedure) - v1.0",
+  "domain": "<< 428297005 |Excision of cyst (procedure)|",
+  "version": 1,
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 129304002 |Excision - action (qualifier value)|) @excision]],\n\t\t[[~1..1]] 363700003 |Direct morphology (attribute)| = [[+id(<< 367643001 |Cyst (morphologic abnormality)|) @cyst]],\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure]],\n\t\t[[~0..1]] 424876005 |Surgical approach (attribute)| = [[+id(< 103379005 |Procedural approach (qualifier value)|) @approach]],\n\t\t[[~0..1]] 424226004 |Using device (attribute)| = [[+id(< 260787004 |Physical object (physical object)|) @device]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 404684003 |Clinical finding (finding)|) @finding]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$excision$ of $cyst$ of $bodyStructure$ using $device$ by $approach$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$excision$ of $cyst$ of $bodyStructure$ using $device$ by $approach$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "excision",
+      "displayName": "[Excision]",
+      "takeFSNFromSlot": "excision"
+    },
+    {
+      "name": "cyst",
+      "displayName": "[cyst]",
+      "takeFSNFromSlot": "cyst"
+    },    
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "device",
+      "displayName": "[device]",
+      "takeFSNFromSlot": "device"      
+    },
+    {
+      "name": "approach",
+      "displayName": "[approach]",
+      "takeFSNFromSlot": "approach"
+    }
+  ]
+}
