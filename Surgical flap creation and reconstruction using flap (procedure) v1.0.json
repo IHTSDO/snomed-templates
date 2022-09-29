@@ -1,0 +1,83 @@
+{
+  "name": "Surgical flap creation and reconstruction using flap (procedure) - v1.0",
+  "domain":"<< 1202018003 |Reconstruction using flap (procedure)| OR (<< 71388002 |Procedure (procedure)| : 260686004 |Method (attribute)| = << 360032005 |Flap reconstruction - action (qualifier value)|)",
+  "version": 1,
+  "logicalTemplate":"71388002 |Procedure (procedure)|:\n\t[[~0..*]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = 1193917004 |Flap creation - action (qualifier value)|,\n\t\t[[~1..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @bodyStructure2]],\t\t\n\t\t[[~1..1]] 363701004 |Direct substance (attribute)| = [[+id(<< 256683004 |Flap (substance)|) @agent2]]\n\t},\n\t[[~1..*]] {\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @bodyStructure1]],\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id( << 360032005 |Flap reconstruction - action (qualifier value)|) @action]],\t\t\n\t\t[[~1..1]] 363701004 |Direct substance (attribute)| = [[+id(<< 256683004 |Flap (substance)|) @agent1]],\t\t\n\t\t[[~0..1]] 363700003 |Direct morphology (attribute)| = [[+id(< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morph]]\n\t},\n\t[[~0..1]] {\t\t\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 64572001 |Disease (disorder)|) @focus]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure1$ using $action$ $agent$ from $bodyStructure2$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure1$ using $action$ from $bodyStructure2$ $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure1$ with $action$ from $bodyStructure2$ $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$action$ $agent$ reconstruction of $bodyStructure1$ from $bodyStructure2$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "action",
+      "displayName": "[action]",
+      "takeFSNFromSlot": "action"
+    },
+    {
+      "name": "agent",
+      "displayName": "[agent]",
+      "takeFSNFromSlot": "agent1"
+    },
+    {
+      "name": "bodyStructure1",
+      "displayName": "[body structure 1]",
+      "takeFSNFromSlot": "bodyStructure1",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "bodyStructure2",
+      "displayName": "[body structure 2]",
+      "takeFSNFromSlot": "bodyStructure2",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    }
+  ]
+}
