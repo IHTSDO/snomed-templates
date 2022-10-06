@@ -52,12 +52,78 @@
     {
       "name": "action",
       "displayName": "[action]",
-      "takeFSNFromSlot": "action"
+      "takeFSNFromSlot": "action",
+      "order": 0,
+      "termReplacements": [
+      	{
+      		"existingTerm": " $agent$",
+      		"replacement": "",
+      		"slotValues":[
+            "1193841002",
+            "1193851001",
+            "1193842009",
+            "1196931005",
+            "1204227006",
+            "1193839003",
+            "1196928009"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local flap",
+      		"slotValues":[
+            "1193841002"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local fascial advancement flap",
+      		"slotValues":[
+            "1193851001"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local muscle rotation flap",
+      		"slotValues":[
+            "1193842009"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local fascial transposition flap",
+      		"slotValues":[
+            "1196931005"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local rotation advancement flap",
+      		"slotValues":[
+            "1204227006"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "distant myocutaneous flap",
+      		"slotValues":[
+            "1193839003"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "regional flap",
+      		"slotValues":[
+            "1196928009"
+      		]
+      	}        
+      ]
     },
     {
       "name": "agent",
       "displayName": "[agent]",
-      "takeFSNFromSlot": "agent1"
+      "takeFSNFromSlot": "agent1",
+      "order": 1
     },
     {
       "name": "bodyStructure1",
