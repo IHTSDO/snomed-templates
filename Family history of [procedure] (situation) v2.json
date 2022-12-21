@@ -1,0 +1,40 @@
+{
+  "name": "Family history of [procedure] (situation) - v2.0",
+  "domain": "< 297249002 |Family history of procedure (situation)|",
+  "version": 2,
+  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t[[~1..1]]{\n\t\t[[~1..1]] 363589002 |Associated procedure (attribute)| = [[+id(< 71388002 |Procedure (procedure)|) @procedure]],\n\t\t[[~1..1]] 408731000 |Temporal context (attribute)| = [[+id(<< 410511007 |Current or past (actual) (qualifier value)|) @temporalContext]],\n\t\t[[~1..1]] 408730004 |Procedure context (attribute)| = 385658003 |Done (qualifier value)|,\n\t\t[[~1..1]] 408732007 |Subject relationship context (attribute)| = [[+id(<< 303071001 |Person in the family (person)|) @subject]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Family history of $procedure$ (situation)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Family history of $procedure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "procedure",
+      "displayName": "[procedure]",
+      "takeFSNFromSlot": "procedure",
+      "removeParts": [
+      ]
+    }
+  ]
+}
