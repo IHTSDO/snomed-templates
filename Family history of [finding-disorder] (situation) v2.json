@@ -1,0 +1,41 @@
+{
+  "name": "Family history of [finding/disorder] (situation) - v2.0",
+  "domain": "< 416471007 |Family history of clinical finding (situation)| ",
+  "version": 2,
+  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 246090004 |Associated finding (attribute)| = [[+id(< 404684003 |Clinical finding (finding)|) @finding]],\n\t\t[[~1..1]] 408731000 |Temporal context (attribute)| = [[+id(<<  410511007 |Current or past (actual) (qualifier value)|) @temporalContext]],\n\t\t[[~1..1]] 408729009 |Finding context (attribute)| = 410515003 |Known present (qualifier value)|,\n\t\t[[~1..1]] 408732007 |Subject relationship context (attribute)| = [[+id(<< 303071001 |Person in the family (person)|) @subject]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Family history of $finding$ (situation)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Family history of $finding$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "finding",
+      "displayName": "[finding/disorder]",
+      "takeFSNFromSlot": "finding",
+      "removeParts": [
+        "finding of"
+      ]
+    }
+  ]
+}
