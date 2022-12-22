@@ -1,0 +1,140 @@
+{
+  "name": "Reconstruction using flap (procedure) - v1.0",
+  "domain":"<< 1202018003 |Reconstruction using flap (procedure)| OR (<< 71388002 |Procedure (procedure)| : 260686004 |Method (attribute)| = << 360032005 |Flap reconstruction - action (qualifier value)|)",
+  "version": 1,
+  "logicalTemplate":"71388002 |Procedure (procedure)|:\n\t[[~0..*]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(< 273248003 |Action (attribute)|) @action2]],\n\t\t[[~0..1]] 424226004 |Using device (attribute)| = [[+id(< 49062001 |Device (physical object)|) @usingDevice]],\n\t\t[[~0..1]] 405814001 |Procedure site - Indirect (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @bodyStructure2]],\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @bodyStructure3]],\t\t\n\t\t[[~0..1]] 363700003 |Direct morphology (attribute)| = [[+id(< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morph2]],\t\t\n\t\t[[~0..1]] 363699004 |Direct device (attribute)| = [[+id(<  49062001 |Device (physical object)|) @directDevice]],\n\t\t[[~0..1]] 363701004 |Direct substance (attribute)| = [[+id(<< 105590001 |Substance (substance)|) @agent2]],\n\t\t[[~0..1]] 424876005 |Surgical approach (attribute)| = [[+id(< 103379005 |Procedural approach (qualifier value)|) @approach2]],\n\t\t[[~0..1]] 260507000 |Access (attribute)| = [[+id(< 309795001 |Surgical access values (qualifier value)|) @access2]]\n\t},\n\t[[~1..*]] {\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 442083009 |Anatomical or acquired body structure (body structure)|) @bodyStructure1]],\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 360032005 |Flap reconstruction - action (qualifier value)|) @action1]],\t\t\n\t\t[[~1..1]] 363701004 |Direct substance (attribute)| = [[+id(<<  256683004 |Flap (substance)|) @agent1]],\t\t\n\t\t[[~0..1]] 363700003 |Direct morphology (attribute)| = [[+id(< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @morph1]],\t\t\n\t\t[[~0..1]] 424876005 |Surgical approach (attribute)| = [[+id(< 103379005 |Procedural approach (qualifier value)|  ) @approach1]],\n\t\t[[~0..1]] 260507000 |Access (attribute)| = [[+id(< 309795001 |Surgical access values (qualifier value)|) @access1]]\n\t},\n\t[[~0..1]] {\t\t\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(<  404684003 |Clinical finding (finding)|) @focus]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure$ using $action$ $agent$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure$ using $action$ $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Reconstruction of $bodyStructure$ with $action$ $agent$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$action$ $agent$ reconstruction of $bodyStructure$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "action",
+      "displayName": "[action]",
+      "takeFSNFromSlot": "action1",
+      "order": 0,
+      "termReplacements": [
+      	{
+      		"existingTerm": " $agent$",
+      		"replacement": "",
+      		"slotValues":[
+            "1193841002",
+            "1193851001",
+            "1193842009",
+            "1196931005",
+            "1204227006",
+            "1193839003",
+            "1196928009"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local flap",
+      		"slotValues":[
+            "1193841002"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local fascial advancement flap",
+      		"slotValues":[
+            "1193851001"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local muscle rotation flap",
+      		"slotValues":[
+            "1193842009"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local fascial transposition flap",
+      		"slotValues":[
+            "1196931005"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "local rotation advancement flap",
+      		"slotValues":[
+            "1204227006"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "distant myocutaneous flap",
+      		"slotValues":[
+            "1193839003"
+      		]
+      	},
+        {
+      		"existingTerm": "$action$",
+      		"replacement": "regional flap",
+      		"slotValues":[
+            "1196928009"
+      		]
+      	}
+      ]
+    },
+    {
+      "name": "agent",
+      "displayName": "[agent]",
+      "takeFSNFromSlot": "agent1",
+      "order": 1
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "bodyStructure1",
+      "order": 2,
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    }
+  ]
+}
