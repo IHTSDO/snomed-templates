@@ -1,0 +1,48 @@
+{
+  "name": "Shunt (physical object) - v2.0",
+  "domain": "<< 257351008 |Shunt (physical object)|",
+  "version": 2,
+  "logicalTemplate": "257351008 |Shunt (physical object)|:\n\t[[~0..1]] 836358009 |Has device intended site (attribute)| = [[+id(< 123037004 |Body structure (body structure)|) @site]],\n\t[[~0..*]] 840560000 |Has compositional material (attribute)| = [[+id(< 105590001 |Substance (substance)|) @material]]\n",
+  "conceptOutline": {
+    "definitionStatus": "PRIMITIVE",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$material$ $site$ shunt (physical object)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$material$ $site$ shunt",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "site",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "material",
+      "displayName": "[compositional material]",
+      "takeFSNFromSlot": "material"
+    }      
+  ]
+}
