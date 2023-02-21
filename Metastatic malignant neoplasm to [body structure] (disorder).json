@@ -1,0 +1,77 @@
+{
+  "name": "Metastatic malignant neoplasm to [body structure] (disorder) - v1.0",
+  "domain":"<<  128462008 |Metastatic malignant neoplasm (disorder)|",
+  "version": 1,
+  "logicalTemplate":"64572001 |Disease (disorder)|: \n\t[[~1..*]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 14799000 |Neoplasm, metastatic (morphologic abnormality)|) @morphology]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(< 442083009 |Anatomical or acquired body structure (body structure)|) @site]],\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(< 282032007 |Periods of life (qualifier value)|) @occurrence]],\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| = [[+id(< 105590001 |Substance (substance)| OR < 410607006 |Organism (organism)| OR < 78621006 |Physical force (physical force)|) @causeAgent]] \n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 255234002 |After (attribute)| = [[+id(< 404684003 |Clinical finding (finding)| OR << 71388002 |Procedure (procedure)|) @after]] \n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(< 288524001 |Courses (qualifier value)|) @course]] \n\t},\n\t[[~0..1]]\t{ \n\t\t[[~0..1]] 42752001 |Due to (attribute)| = [[+id(< 404684003 |Clinical finding (finding)| OR < 272379006 |Event (event)| OR <<  71388002 |Procedure (procedure)|) @dueTo]] \n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Metastatic $course$ $occurrence$ $morphology$ to $site$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Metastatic $course$ $occurrence$ $morphology$ to $site$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Metastatic $course$ $occurrence$ $morphology$ of $site$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Secondary $course$ $occurrence$ $morphology$ of $site$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "course",
+      "displayName": "[course]",
+      "takeFSNFromSlot": "course"
+    },
+    {
+      "name": "occurrence",
+      "displayName": "[periods of life]",
+      "takeFSNFromSlot": "occurrence"
+    },
+    {
+      "name": "morphology",
+      "displayName": "[neoplasm, metastatic morphology]",
+      "takeFSNFromSlot": "morphology"
+    },
+    {
+      "name": "site",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "structure of",
+      	"structure"
+      ]
+    }
+  ]
+}
