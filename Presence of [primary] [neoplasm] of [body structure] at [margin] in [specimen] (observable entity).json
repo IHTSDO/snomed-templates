@@ -1,0 +1,94 @@
+{
+  "name": "Presence of [primary] [neoplasm] of [body structure] at [margin] in [specimen] (observable entity) - v1.0",
+  "domain":"< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 705057003 |Presence (property) (qualifier value)| , 246093002 |Component (attribute)| = << 108369006 |Neoplasm (morphologic abnormality)|, 704319004 |Inheres in (attribute)| = << 871811002 |Surgical margin (morphologic abnormality)|",
+  "version": 2,
+  "logicalTemplate":"363787002 |Observable entity (observable entity)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 246093002 |Component (attribute)| = [[+id(<< 108369006 |Neoplasm (morphologic abnormality)|) @component]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 370130000 |Property (attribute)| = 705057003 |Presence (property) (qualifier value)|\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 370132008 |Scale type (attribute)| = 117363000 |Ordinal value (qualifier value)|\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 370134009 |Time aspect (attribute)| = 123029007 |Single point in time (qualifier value)|\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 704319004 |Inheres in (attribute)| = [[+id(<< 871811002 |Surgical margin (morphologic abnormality)|) @inheresIn]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 704321009 |Characterizes (attribute)| = [[+id(1234914003 |Malignant proliferation of primary neoplasm (qualifier value)|) @characterizes]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 704327008 |Direct site (attribute)| = [[+id(<< 439479000 |Tissue specimen obtained by excision (specimen)|) @directSite]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 718497002 |Inherent location (attribute)| = [[+id(<< 91723000 |Anatomical structure (body structure)|) @inherentLocation]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Presence of $characterizes$ $component$ of $inherentLocation$ at $inheresIn$ in $directSite$ (observable entity)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Presence of $characterizes$ $component$ of $inherentLocation$ at $inheresIn$ in $directSite$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Status of $inheresIn$ involvement by $characterizes$ $component$ of $inherentLocation$ in $directSite$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "characterizes",
+      "displayName": "[primary]",
+      "takeFSNFromSlot": "characterizes",
+      "termReplacements": [
+      	{
+      		"existingTerm": "$characterizes$",
+      		"replacement": "primary",
+      		"slotValues":[
+      		  "1234914003"
+      		]
+      	},
+        {
+          "existingTerm": "$characterizes$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "displayName": "[neoplasm]",
+      "takeFSNFromSlot": "component"
+
+    },
+    {
+      "name": "inherentLocation",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "inherentLocation",
+      "termReplacements": [
+        {
+          "existingTerm": " of $inherentLocation$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
+      "removeParts": [
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "inheresIn",
+      "displayName": "[margin]",
+      "takeFSNFromSlot": "inheresIn"
+    },
+    {
+      "name": "directSite",
+      "displayName": "[specimen]",
+      "takeFSNFromSlot": "directSite"
+    }
+  ]
+}
