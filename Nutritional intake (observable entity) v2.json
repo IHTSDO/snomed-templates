@@ -1,0 +1,93 @@
+{
+  "name": "Nutritional intake (observable entity) - v2.0",
+  "domain": "< 364393001 |Nutritional observable (observable entity)|",
+  "version": 2,
+  "logicalTemplate": "364393001 |Nutritional observable (observable entity)|:\n\t[[~0..*]] {\n\t\t[[~0..1]] 1003735000 |Process acts on (attribute)| = [[+id(<< 105590001 |Substance (substance)|) @substance]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 246501002 |Technique (attribute)| = [[+id(761996005 |Estimation technique (qualifier value)| OR 272391002 |Measurement technique (qualifier value)|) @technique]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 246514001 |Units (attribute)| = [[+id(827056004 |Serving (qualifier value)| OR 228922002 |Gram/meal (qualifier value)| OR 258682000 |gram (qualifier value)| OR 229793000 |Gram/week (qualifier value)|) @unit]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 370130000 |Property (attribute)| = [[+id(< 118598001 |Property (qualifier value)|) @property]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..1]] 704321009 |Characterizes (attribute)| = [[+id(<< 107733003 |Introduction procedure (procedure)|) @route]]\n\t},\n\n\t[[~0..1]] {\n\t\t[[~0..1]] 704323007 |Process duration (attribute)| = [[+id(< 310886004 |Absolute times - hours (qualifier value)|) @timeframe]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$technique$ quantity of intake of $substance$ via $route$ in $timeframe$ (observable entity)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$technique$ quantity of intake of $substance$ via $route$ in $timeframe$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "technique",
+      "displayName": "[technique]",
+      "takeFSNFromSlot": "technique",
+      "termReplacements": [
+        {
+          "existingTerm": "$technique$",
+          "replacement": "Estimated",
+          "slotValues":[
+      			"761996005"
+      		]
+        },
+        {
+          "existingTerm": "$technique$",
+          "replacement": "Measured",
+          "slotValues":[
+      			"272391002"
+      		]
+        }
+      ]
+    },
+    {
+      "name": "substance",
+      "displayName": "[substance]",
+      "takeFSNFromSlot": "substance",
+      "termReplacements": [
+        {
+          "existingTerm": " of $substance$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    },
+    {
+      "name": "route",
+      "displayName": "[route]",
+      "takeFSNFromSlot": "route",
+      "termReplacements": [
+        {
+          "existingTerm": " via $route$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ],
+      "removeParts": [
+        "administration of substance via"
+      ]      
+    },    
+    {
+      "name": "timeframe",
+      "displayName": "[timeframe]",
+      "takeFSNFromSlot": "timeframe",
+      "termReplacements": [
+        {
+          "existingTerm": " in $timeframe$",
+          "replacement": "",
+          "slotAbsent": "true"
+        }
+      ]
+    }
+  ]
+}
