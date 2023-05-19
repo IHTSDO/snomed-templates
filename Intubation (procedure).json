@@ -1,0 +1,62 @@
+{
+  "name": "Intubation (procedure) - v1.0",
+  "domain": "<< 52765003 |Intubation (procedure)| minus (<< 71388002 |Procedure (procedure)| : 260686004 |Method (attribute)| != << 257867005 |Insertion - action (qualifier value)|)",
+  "version": 1,
+  "logicalTemplate": "71388002 |Procedure (procedure)|:\n\t[[~1..2]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 257867005 |Insertion - action (qualifier value)|) @insertion]],\n\t\t[[~0..1]] 405814001 |Procedure site - Indirect (attribute)| = [[+id(<< 2969000 |Anatomical space structure (body structure)|) @bodyStructure]],\n\t\t[[~1..1]] 363699004 |Direct device (attribute)| = [[+id(<< 83059008 |Tube, device (physical object)|) @directDevice]],\n\t\t[[~0..1]] 260507000 |Access (attribute)| = [[+id(<< 309795001 |Surgical access values (qualifier value)|) @access]],\n\t\t[[~0..1]] 424876005 |Surgical approach (attribute)| = [[+id(< 103379005 |Procedural approach (qualifier value)|) @approach]],\n\t\t[[~0..1]] 425391005 |Using access device (attribute)| = [[+id(<< 37270008 |Endoscope, device (physical object)|) @usingAccessDevice]],\n\t\t[[~0..1]] 363700003 |Direct morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @directMorphology]],\n\t\t[[~0..1]] 363709002 |Indirect morphology (attribute)| = [[+id(<< 49755003 |Morphologically abnormal structure (morphologic abnormality)|) @indirectMorphology]]\n\t},\n\t[[~0..1]] {\n\t\t[[~1..1]] 260686004 |Method (attribute)| = [[+id(<< 360037004 |Imaging - action (qualifier value)|) @imaging]],\n\t\t[[~0..1]] 405813007 |Procedure site - Direct (attribute)| = [[+id(< 442083009 |Anatomical or acquired body structure (body structure)|) @site]],\n\t\t[[~1..1]] 363703001 |Has intent (attribute)| = 429892002 |Guidance intent (qualifier value)|,\n\t\t[[~0..1]] 424361007 |Using substance (attribute)| = [[+id(<< 385420005 |Contrast media (substance)|) @contrast]]\n\t},\n\t[[~0..0]] {\n\t\t[[~0..1]] 363702006 |Has focus (attribute)| = [[+id(< 404684003 |Clinical finding (finding)| OR < 71388002 |Procedure (procedure)|) @focus]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$access$ $approach$ intubation of $bodyStructure$ using $imaging$ guidance with $contrast$ (procedure)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$access$ $approach$ intubation of $bodyStructure$ using $imaging$ guidance with $contrast$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+    {
+      "name": "access",
+      "displayName": "[Access]",
+      "takeFSNFromSlot": "access"
+    },
+    {
+      "name": "approach",
+      "displayName": "[approach]",
+      "takeFSNFromSlot": "approach"
+    },
+    {
+      "name": "bodyStructure",
+      "displayName": "[body structure]",
+      "takeFSNFromSlot": "bodyStructure",
+      "removeParts": [
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "imaging",
+      "displayName": "[imaging]",
+      "takeFSNFromSlot": "imaging"
+    },
+    {
+      "name": "contrast",
+      "displayName": "[contrast]",
+      "takeFSNFromSlot": "contrast"
+    }
+  ]
+}
