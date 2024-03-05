@@ -1,0 +1,43 @@
+{
+  "name": "MPF-containing ingredient (medicinal product form) - v1.0",
+  "domain": "< 763158003 |Medicinal product (product)|",
+  "version": 1,
+  "logicalTemplate": "763158003 |Medicinal product (product)|:\n\t[[~1..1]] 411116001 |Has manufactured dose form (attribute)| = [[+id(<  736542009 |Pharmaceutical dose form (dose form)|) @pharmaceuticalDoseForm]]\n\t[[~1..*]] {\n\t\t[[~1..1]] 127489000 |Has active ingredient (attribute)| = [[+id(< 105590001 |Substance (substance)|) @substance]]\t\t\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Product containing $substance$ in $pharmaceuticalDoseForm$ (medicinal product form)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$substance$-containing product in $pharmaceuticalDoseForm$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "substance",
+      "displayName": "[substance]",
+      "takeFSNFromSlot": "substance"
+    },
+    {
+      "name": "pharmaceuticalDoseForm",
+      "displayName": "[pharmaceutical dose form]",
+      "takeFSNFromSlot": "pharmaceuticalDoseForm"
+    }
+  ]
+}
