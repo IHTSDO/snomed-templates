@@ -1,0 +1,75 @@
+{
+  "name": "Infected wound of site due to bite (disorder) - v1.0",
+  "domain": "<< 283682007 |Bite - wound (disorder)|",
+  "version": 1,
+  "logicalTemplate": "64572001 |Disease (disorder)|:\t\n\t[[~1..1]] {\n\t\t[[~1..1]] 116676008 |Associated morphology (attribute)| = [[+id(<< 3404009 |Bite (morphologic abnormality)|) @morphology]],\n\t\t[[~0..1]] 363698007 |Finding site (attribute)| = [[+id(< 91723000 |Anatomical structure (body structure)|) @site]],\n\t\t[[~1..1]] 370135005 |Pathological process (attribute)| = 441862004 |Infectious process (qualifier value)|,\n\t\t[[~0..1]] 246075003 |Causative agent (attribute)| =[[+id(410607006 |Organism (organism)|) @organism]]\n\t},\n\t[[~1..1]] {\n\t\t[[~1..1]] 42752001 |Due to (attribute)| = [[+id(<< 782161000 |Bite (event)|) @biteEvent]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Infected $morphology$ of $site$ due to $biteEvent$ caused by $organism$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Infected $biteEvent$ $morphology$ of $site$ caused by $organism$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Infected $morphology$ of $site$ due to $biteEvent$ caused by $organism$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [
+  	{
+      "name": "morphology",
+      "displayName": "[morphology]",
+      "takeFSNFromSlot": "morphology"
+    },
+    {
+      "name": "site",
+      "displayName": "[site]",
+      "takeFSNFromSlot": "site",
+      "removeParts": [
+        "Structure of",
+        "structure of",
+        "structure"
+      ]
+    },
+    {
+      "name": "biteEvent",
+      "displayName": "[biteEvent]",
+      "takeFSNFromSlot": "biteEvent"
+    },
+    {
+      "name": "organism",
+      "displayName": "[organism]",
+      "takeFSNFromSlot": "organism",
+      "termReplacements": [
+      	{
+      		"existingTerm": "caused by $organism$",
+      		"replacement": "",
+      		"slotAbsent": "true"
+      	}
+      ]
+    }    
+  ]
+}
