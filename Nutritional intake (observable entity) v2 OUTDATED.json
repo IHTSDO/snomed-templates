@@ -1,5 +1,5 @@
 {
-  "name": "Nutritional intake (observable entity) - v2.0",
+  "name": "Nutritional intake (observable entity) v2 - OUTDATED",
   "domain": "< 364393001 |Nutritional observable (observable entity)|",
   "version": 2,
   "logicalTemplate": "364393001 |Nutritional observable (observable entity)|:\n\t[[~0..*]] {\n\t\t[[~0..1]] 1003735000 |Process acts on (attribute)| = [[+id(<< 105590001 |Substance (substance)|) @substance]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 246501002 |Technique (attribute)| = [[+id(761996005 |Estimation technique (qualifier value)| OR 272391002 |Measurement technique (qualifier value)|) @technique]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 246514001 |Units (attribute)| = [[+id(827056004 |Serving (qualifier value)| OR 228922002 |Gram/meal (qualifier value)| OR 258682000 |gram (qualifier value)| OR 229793000 |Gram/week (qualifier value)|) @unit]]\n\t},\n\t[[~0..1]] {\n\t\t[[~0..1]] 370130000 |Property (attribute)| = [[+id(< 118598001 |Property (qualifier value)|) @property]]\n\t},\n\t[[~0..*]] {\n\t\t[[~0..1]] 704321009 |Characterizes (attribute)| = [[+id(<< 107733003 |Introduction procedure (procedure)|) @route]]\n\t},\n\n\t[[~0..1]] {\n\t\t[[~0..1]] 704323007 |Process duration (attribute)| = [[+id(< 310886004 |Absolute times - hours (qualifier value)|) @timeframe]]\n\t}\n",
