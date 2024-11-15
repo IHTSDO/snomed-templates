@@ -1,0 +1,48 @@
+{
+  "name": "Harmful pattern of use of  [substance and/or product] (disorder) - v1.0",
+  "domain": "< 1306692000 |Harmful pattern of substance use (disorder)|",
+  "version": 1,
+  "logicalTemplate": "74732009 |Mental disorder (disorder)|:\n\t[[~1..1]] {\n\t\t[[~0..1]] 246454002 |Occurrence (attribute)| = [[+id(< 282032007 |Periods of life (qualifier value)|) @periodsOfLife]],\n\t\t[[~1..1]] 246075003 |Causative agent (attribute)| = [[+id(< 105590001 |Substance (substance)| OR < 373873005 |Pharmaceutical / biologic product (product)|) @substanceAndOrProduct]]\n\t},\n\t[[~0..1]] {\n        [[~0..1]] 263502005 |Clinical course (attribute)| = [[+id(< 288524001 |Courses (qualifier value)|) @course]]\n    },\n    [[~1..1]] {\n            [[~1..1]] 363714003 |Interprets (attribute)| = [[+id(<< 1187057000 |Substance use behavior (observable entity)|) @interprets]]\n    }\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "Harmful pattern of use of $substanceAndOrProduct$ (disorder)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "Harmful pattern of use of $substanceAndOrProduct$",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$substanceAndOrProduct$ abuse",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "substanceAndOrProduct",
+      "displayName": "[substance and/or product]",
+      "takeFSNFromSlot": "substanceAndOrProduct"
+    }
+  ]
+}
