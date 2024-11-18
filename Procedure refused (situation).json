@@ -1,0 +1,48 @@
+{
+  "name": "Procedure refused (situation) - v1.0",
+  "domain": "<< 1296859006 |Procedure declined (situation)|",
+  "version": 1,
+  "logicalTemplate": "243796009 |Situation with explicit context (situation)|:\n\t[[~1..1]] {\n\t\t[[~1..1]] 408732007 |Subject relationship context (attribute)| = [[+id(< 125676002 |Person (person)|) @person]],\n\t\t[[~1..1]] 408731000 |Temporal context (attribute)| = [[+id(<< 410511007 |Current or past (actual) (qualifier value)|) @temporalContext]],\n\t\t[[~1..1]] 408730004 |Procedure context (attribute)| = [[+id(<<  443390004 |Refused (qualifier value)|) @procedureContext]],\n\t\t[[~1..1]] 363589002 |Associated procedure (attribute)| = [[+id(<<  71388002 |Procedure (procedure)|) @procedure]]\n\t}\n",
+  "conceptOutline": {
+    "definitionStatus": "FULLY_DEFINED",
+    "descriptions": [
+      {
+        "type": "FSN",
+        "lang": "en",
+        "termTemplate": "$procedure$ declined (situation)",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$procedure$ declined",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "PREFERRED",
+          "900000000000509007": "PREFERRED"
+        }
+      },
+      {
+        "type": "SYNONYM",
+        "lang": "en",
+        "termTemplate": "$procedure$ refused",
+        "caseSignificance": "CASE_INSENSITIVE",
+        "acceptabilityMap": {
+          "900000000000508004": "ACCEPTABLE",
+          "900000000000509007": "ACCEPTABLE"
+        }
+      }
+    ]
+  },
+  "lexicalTemplates": [    
+    {
+      "name": "procedure",
+      "displayName": "[Procedure]",
+      "takeFSNFromSlot": "procedure"
+    }
+  ]
+}
